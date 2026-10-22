@@ -26,6 +26,4 @@
   <text class="lg" x="980" y="500">5</text>
   <rect class="node accent" x="1030" y="465" width="6" height="50"/>
   <text class="sm" x="1050" y="500">1 / 100</text>
-  <path class="edge dashed accent" d="M1155 560 V820 H75 V665"/>
-  <text class="sm muted mid" x="675" y="870">verification loop: check the answer, try again</text>
 </svg>

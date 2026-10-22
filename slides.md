@@ -38,7 +38,7 @@
 
 <!-- .slide: class="section-divider" -->
 
-## The Year In AI
+## The Year in AI
 
 
 
@@ -154,11 +154,11 @@ given all of this, what do we conclude? do we believe that "everyone else is AI 
 <ol class="plain">
 <li>01 The Year in AI</li>
 <li>02 Understanding how agents "think"</li>
-<li>03 How do you collaborate with "agents" you can't trust?</li>
-<li>04 A glimpse of the future</li>
+<li>03 How do you collaborate with an "agent" you can't trust?</li>
+<li>04 Shared context: the first pass</li>
 <li>05 The reality of agent factories</li>
 <li>06 The missing piece: shared context</li>
-<li>07 How are they doing it?</li>
+<li>07 How are the teams merging 30k changes a day doing it?</li>
 <li>08 So now you know</li>
 </ol>
 
@@ -654,7 +654,7 @@ this is an accelerant of problems from an earlier era: it's always been a proble
 
 <!-- .slide: class="section-divider" -->
 
-## Shared context: The first pass
+## Shared context: the first pass
 
 Note:
 4. With the harness, the glimpse of the future becomes possible: Perhaps we can all share a single harness. A Github repo, maybe. Oh, and let's run our coding agent in a Docker container in the cloud, and hook it up to the same github repo! And maybe the agents can run overnight, and...
@@ -800,8 +800,6 @@ Note:
 
 ---
 
-<!-- .slide: class="callout" -->
-
 ## The agent factory goal
 
 * Developers stop implementing, agents take over
@@ -842,12 +840,12 @@ Note:
 
 ## Anatomy of an agent factory
 
-We'll justify each of the pieces.
-
 <div class="diagram" data-src="diagrams/factory.svg"></div>
 
 Note:
 [original title] A typical agent factory
+
+[said, not shown] We'll justify each of the pieces.
 
 The components we think are essential are:
 
@@ -972,6 +970,21 @@ Note:
 
 ---
 
+<!-- .slide: class="callout" -->
+
+## Massive coordination
+
+In order to accomplish this vision, these agents need to operate in a massively coordinated way. Hence: shared context.
+
+Note:
+[original title] These agents need to operate in a massively coordinated way
+
+6. But there's a missing piece to the magic here, which is: in order to accomplish this vision, these agents need to operate in a massively coordinated way. Hence: shared context.
+
+- Basic implementation still looks a lot like what you have when teammates are coordinating their agents with one another. But you quickly run into difficulties with that basic setup.
+
+---
+
 <!-- .slide: class="media-full borrowed dark" style="--ibm-bg: #000000" -->
 
 <img class="media" src="img/gabe/gabe-context-3.png" alt="CONTEXT: the input to a GenAI model">
@@ -1015,21 +1028,6 @@ Note:
 
 Note:
 [Gabe's slides] Memory, his slide 46. Leads into: shared context is memory that more than one agent, and more than one person, reads and writes.
-
----
-
-<!-- .slide: class="callout" -->
-
-## Massive coordination
-
-Hence: shared context.
-
-Note:
-[original title] These agents need to operate in a massively coordinated way
-
-6. But there's a missing piece to the magic here, which is: in order to accomplish this vision, these agents need to operate in a massively coordinated way. Hence: shared context.
-
-- Basic implementation still looks a lot like what you have when teammates are coordinating their agents with one another. But you quickly run into difficulties with that basic setup.
 
 ---
 
@@ -1127,7 +1125,7 @@ Note:
 
 ## Old problems, lightning speed
 
-But as we increasingly introduce automation to the work, they now happen at lightning speed.
+These problems already existed in the pre-AI world. But as we increasingly introduce automation to the work, they now happen at lightning speed.
 
 Note:
 [original title] These problems already existed in the pre-AI world
@@ -1228,11 +1226,13 @@ Note:
 
 ## Dual-write
 
-Connect to ALL your internal resources, because your team will do it anyway! Either you get to control the exposure, or you deal with uncontrolled exfiltration.
+An agent finds a new architecture diagram. Should it update the team's shared context LLM wiki, or Box? They're not automatically kept in sync.
 
 <div class="diagram" data-src="diagrams/dual-write.svg"></div>
 
 Note:
+[slide text before final review] Connect to ALL your internal resources, because your team will do it anyway! Either you get to control the exposure, or you deal with uncontrolled exfiltration. (Moved here: it's the advice, not the problem the picture shows. Say it out loud, or it fits "internal company info, with guardrails" on the anatomy slide.)
+
 * the list of shared context technical problems
 
 * dual-write (connect to ALL your internal resources - because your team will do it anyway! either you get to control the exposure, or you deal with uncontrolled exfiltration)
