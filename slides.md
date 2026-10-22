@@ -989,8 +989,8 @@ Note:
 
 <img class="media" src="img/gabe/gabe-context-3.png" alt="CONTEXT: the input to a GenAI model">
 
-<p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
-<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
+<p class="credit">Slides: Gabe Goodhart, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe Goodhart's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides, a brief refresher on why we call it "context"] Gabe's slide 4.
@@ -1003,8 +1003,8 @@ Note:
 <img class="media fragment" data-fragment-index="1" src="img/gabe/gabe-context-5.png" alt="Context tokens: the math">
 <img class="media fragment" data-fragment-index="2" src="img/gabe/gabe-context-6.png" alt="Context tokens: I'm Gabe. What's my name?">
 
-<p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
-<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
+<p class="credit">Slides: Gabe Goodhart, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe Goodhart's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Context tokens (his slide 6 and its builds): each click lays the next build over the last.
@@ -1015,8 +1015,8 @@ Note:
 
 <img class="media" src="img/gabe/gabe-context-2.png" alt="Context patterns: prompting, knowledge, action, memory, length">
 
-<p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
-<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
+<p class="credit">Slides: Gabe Goodhart, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe Goodhart's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Context patterns, his slide 27.
@@ -1027,8 +1027,8 @@ Note:
 
 <img class="media" src="img/gabe/gabe-context-1.png" alt="Memory: remember and recall">
 
-<p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
-<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
+<p class="credit">Slides: Gabe Goodhart, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe Goodhart's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Memory, his slide 46. Leads into: shared context is memory that more than one agent, and more than one person, reads and writes.

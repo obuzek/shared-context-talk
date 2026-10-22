@@ -17,6 +17,6 @@ Slides are in `slides.md` (reveal.js markdown); diagrams are SVGs in `diagrams/`
 
 ## Credits
 
-- The four "context" refresher slides are Gabe's, from his IBM Dev Day 2026 talk (`img/gabe/`).
+- The four "context" refresher slides are Gabe Goodhart's, from his IBM Dev Day 2026 talk (`img/gabe/`).
 - The Team Maturity Model slide (hidden appendix, `img/team-maturity-model.png`) is Jessica Nahulan's, from "Scaling Agentic Adoption – Data Core" (IBM, 2026).
 - Other charts and screenshots are credited to their sources on each slide.
