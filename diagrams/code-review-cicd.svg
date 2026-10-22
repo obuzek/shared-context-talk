@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Code review CI/CD: built up one click at a time, in the order Olivia drew it.
+     The repo shows first; each <g class="fragment"> adds the next piece. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- 0. the github repo -->
+  <rect class="node" x="450" y="330" width="380" height="230"/>
+  <text class="title mid" x="640" y="600">github repo</text>
+
+  <!-- 1. what's in it -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="mono" x="490" y="400">.skills</text>
+    <text class="mono" x="490" y="450">AGENTS.md</text>
+  </g>
+
+  <!-- 2. its own identity -->
+  <g class="fragment" data-fragment-index="2">
+    <rect class="node" x="410" y="120" width="460" height="80"/>
+    <text class="mono mid" x="640" y="160">agent@company.com</text>
+    <line class="edge plain" x1="640" y1="200" x2="640" y2="330"/>
+    <text class="muted" x="664" y="274">ID / auth</text>
+  </g>
+
+  <!-- 3. task graph -->
+  <g class="fragment" data-fragment-index="3">
+    <line class="edge plain" x1="830" y1="510" x2="944" y2="510"/>
+    <line class="edge plain" x1="976" y1="510" x2="1044" y2="510"/>
+    <line class="edge plain" x1="1074" y1="502" x2="1136" y2="478"/>
+    <line class="edge plain" x1="1074" y1="518" x2="1136" y2="542"/>
+    <line class="edge plain" x1="960" y1="526" x2="960" y2="584"/>
+    <line class="edge plain" x1="976" y1="600" x2="1044" y2="600"/>
+    <line class="edge plain" x1="1076" y1="600" x2="1134" y2="600"/>
+    <circle class="node" cx="960" cy="510" r="16"/>
+    <circle class="node" cx="1060" cy="510" r="16"/>
+    <circle class="node" cx="1150" cy="472" r="16"/>
+    <circle class="node" cx="1150" cy="548" r="16"/>
+    <circle class="node" cx="960" cy="600" r="16"/>
+    <circle class="node" cx="1060" cy="600" r="16"/>
+    <circle class="node" cx="1150" cy="600" r="16"/>
+    <path class="edge plain" d="M 940 636 Q 940 656 970 656 L 1035 656 Q 1055 656 1055 676 Q 1055 656 1075 656 L 1140 656 Q 1170 656 1170 636"/>
+    <text class="mid" x="1055" y="706">task graph</text>
+  </g>
+
+  <!-- 4. GitHub -->
+  <g class="fragment" data-fragment-index="4">
+    <line class="edge" x1="830" y1="370" x2="964" y2="320"/>
+    <text class="title" x="980" y="330">GitHub</text>
+  </g>
+
+  <!-- 5. ontology: who's on the team -->
+  <g class="fragment" data-fragment-index="5">
+    <line class="edge plain" x1="450" y1="560" x2="380" y2="620"/>
+    <text class="title" x="230" y="660">ontology</text>
+    <circle class="node" cx="300" cy="712" r="16"/>
+    <text class="end" x="274" y="720">Mary</text>
+    <line class="edge plain" x1="290" y1="726" x2="236" y2="780"/>
+    <line class="edge plain" x1="308" y1="727" x2="344" y2="782"/>
+    <line class="edge plain" x1="316" y1="712" x2="464" y2="770"/>
+    <circle class="node" cx="226" cy="792" r="14"/>
+    <circle class="node" cx="352" cy="794" r="14"/>
+    <text class="mid" x="226" y="840">Jim</text>
+    <text class="mid" x="352" y="840">Alice</text>
+    <text class="mid" x="490" y="796">Team B</text>
+  </g>
+
+  <!-- 6. playwright: a headless browser -->
+  <g class="fragment" data-fragment-index="6">
+    <line class="edge plain" x1="450" y1="400" x2="340" y2="400"/>
+    <text class="title" x="60" y="320">playwright</text>
+    <rect class="node" x="60" y="350" width="280" height="170"/>
+    <line class="edge plain" x1="60" y1="390" x2="340" y2="390"/>
+    <circle class="node fill-strong" cx="84" cy="370" r="6"/>
+    <circle class="node fill-strong" cx="104" cy="370" r="6"/>
+    <circle class="node fill-strong" cx="124" cy="370" r="6"/>
+  </g>
+
+  <!-- 7. Slack -->
+  <g class="fragment" data-fragment-index="7">
+    <line class="edge" x1="830" y1="420" x2="964" y2="410"/>
+    <text class="title" x="980" y="420">Slack</text>
+  </g>
+</svg>

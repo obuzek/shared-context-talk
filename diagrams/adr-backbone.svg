@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Specs and ADRs as the backbone: wiki pages hang off decisions; the ontology types them.
+     Click: Joe's PR meets ADR-007 and goes to a human. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="title mid" x="165" y="30">LLM wiki</text>
+  <text class="title mid" x="675" y="30">ADRs</text>
+  <text class="title mid" x="1185" y="30">ontology</text>
+
+  <!-- the backbone -->
+  <line class="edge plain" x1="675" y1="170" x2="675" y2="260"/>
+  <line class="edge plain" x1="675" y1="370" x2="675" y2="460"/>
+  <line class="edge plain" x1="675" y1="570" x2="675" y2="660"/>
+  <rect class="node" x="525" y="60" width="300" height="110"/>
+  <text class="title" x="549" y="105">ADR-003</text>
+  <text class="sm muted" x="549" y="140">Postgres for billing</text>
+  <rect class="node" x="525" y="260" width="300" height="110"/>
+  <text class="title" x="549" y="305">ADR-005</text>
+  <text class="sm muted" x="549" y="340">events over polling</text>
+  <rect class="node accent-outline" x="525" y="460" width="300" height="110"/>
+  <text class="title" x="549" y="505">ADR-007</text>
+  <text class="sm muted" x="549" y="540">FrameworkX: licensing</text>
+  <rect class="node" x="525" y="660" width="300" height="110"/>
+  <text class="title" x="549" y="705">ADR-009</text>
+  <text class="sm muted" x="549" y="740">supersedes ADR-003</text>
+
+  <!-- wiki pages hang off decisions -->
+  <path class="node" d="M24 70 H70 L90 90 V150 H24 Z"/>
+  <text class="sm" x="110" y="118">billing architecture</text>
+  <path class="node" d="M24 270 H70 L90 290 V350 H24 Z"/>
+  <text class="sm" x="110" y="318">event bus how-to</text>
+  <path class="node" d="M24 470 H70 L90 490 V550 H24 Z"/>
+  <text class="sm" x="110" y="518">framework guide</text>
+  <line class="edge plain dashed muted" x1="320" y1="110" x2="525" y2="115"/>
+  <line class="edge plain dashed muted" x1="300" y1="310" x2="525" y2="315"/>
+  <line class="edge plain dashed muted" x1="290" y1="510" x2="525" y2="515"/>
+
+  <!-- the ontology types the decision -->
+  <rect class="node" x="1040" y="380" width="290" height="70"/>
+  <text class="sm" x="1060" y="422">type: Decision</text>
+  <rect class="node" x="1040" y="480" width="290" height="70"/>
+  <text class="sm" x="1060" y="522">decided by: principal eng.</text>
+  <rect class="node" x="1040" y="580" width="290" height="70"/>
+  <text class="sm" x="1060" y="622">affects: feature XYZ</text>
+  <path class="edge plain" d="M825 515 H960 V415 H1040"/>
+  <line class="edge plain" x1="825" y1="515" x2="1040" y2="515"/>
+  <path class="edge plain" d="M825 515 H960 V615 H1040"/>
+
+  <!-- click: Joe's PR meets the backbone -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="agent mid" x="60" y="800">🤖</text>
+    <text class="sm" x="110" y="790">Joe's agent: PR pulls in</text>
+    <text class="sm" x="110" y="816">MajorUnlicensedLibrary</text>
+    <line class="edge accent" x1="330" y1="770" x2="525" y2="560"/>
+    <text class="title accent" x="525" y="860">conflicts with ADR-007: ask a human</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- A pile of pages: a wiki is text, so an agent's simple question gets several conflicting answers,
+     and the most-repeated one wins (click). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- the agent and its question -->
+  <path class="node" d="M0 160 H390 V290 H120 L90 330 V290 H0 Z"/>
+  <text class="title mid" x="195" y="208">who owns the</text>
+  <text class="title mid" x="195" y="246">payments service?</text>
+  <text class="emoji mid" x="110" y="440">🤖</text>
+  <line class="edge" x1="200" y1="440" x2="500" y2="440"/>
+
+  <!-- the pile: just text -->
+  <rect class="node" x="500" y="240" width="260" height="330"/>
+  <rect class="node" x="524" y="260" width="260" height="330"/>
+  <rect class="node" x="548" y="280" width="260" height="330"/>
+  <rect class="node" x="572" y="300" width="260" height="330"/>
+  <line class="edge plain muted" x1="596" y1="350" x2="808" y2="350"/>
+  <line class="edge plain muted" x1="596" y1="380" x2="808" y2="380"/>
+  <line class="edge plain muted" x1="596" y1="410" x2="760" y2="410"/>
+  <line class="edge plain muted" x1="596" y1="460" x2="808" y2="460"/>
+  <line class="edge plain muted" x1="596" y1="490" x2="790" y2="490"/>
+  <line class="edge plain muted" x1="596" y1="540" x2="808" y2="540"/>
+  <line class="edge plain muted" x1="596" y1="570" x2="720" y2="570"/>
+  <text class="title mid" x="666" y="690">the wiki</text>
+  <text class="sm muted mid" x="666" y="726">894 pages of markdown</text>
+
+  <!-- click 1: what comes back -->
+  <g class="fragment" data-fragment-index="1">
+    <line class="edge" x1="832" y1="465" x2="960" y2="240"/>
+    <line class="edge" x1="832" y1="465" x2="960" y2="440"/>
+    <line class="edge" x1="832" y1="465" x2="960" y2="640"/>
+    <rect class="node" x="960" y="180" width="390" height="120"/>
+    <text class="title" x="984" y="232">“Team A”</text>
+    <text class="sm muted" x="984" y="268">design doc, 2024 (7 pages say so)</text>
+    <rect class="node" x="960" y="380" width="390" height="120"/>
+    <text class="title" x="984" y="432">“Team B”</text>
+    <text class="sm muted" x="984" y="468">meeting notes, last month</text>
+    <rect class="node" x="960" y="580" width="390" height="120"/>
+    <text class="title" x="984" y="632">“ask Sam”</text>
+    <text class="sm muted" x="984" y="668">a pasted Slack thread</text>
+  </g>
+
+  <!-- click 2: which one wins -->
+  <g class="fragment" data-fragment-index="2">
+    <rect class="highlight" x="952" y="172" width="406" height="136"/>
+    <text class="title accent mid" x="675" y="840">the most-repeated answer wins: attention follows frequency</text>
+  </g>
+</svg>

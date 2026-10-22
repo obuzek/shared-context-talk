@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Elements of Context Engineering</title>
+<link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
+<link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="ibm/ibm.css">
+<link rel="stylesheet" href="ibm/diagram.css">
+<link rel="stylesheet" href="talk.css">
+<script>
+  // ?dark in the URL starts the deck in dark mode; press D to toggle.
+  if (new URLSearchParams(location.search).has('dark')) document.documentElement.classList.add('ibm-dark');
+</script>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+  <section data-markdown="slides.md"
+           data-separator="^\r?\n---\r?\n$"
+           data-separator-vertical="^\r?\n--\r?\n$"
+           data-separator-notes="^Note:"></section>
+</div></div>
+<script src="node_modules/reveal.js/dist/reveal.js"></script>
+<script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+<script src="ibm/diagrams.js"></script>
+<script src="ibm/ibm.js"></script>
+<script>
+// Initialize after window 'load': reveal.js registers its own load -> layout() listener in
+// initialize(), and if that fires before the async markdown plugin finishes (so before
+// start() has rendered the backgrounds), a viewport <= scrollActivationWidth (435px)
+// throws "Cannot set properties of undefined (setting 'innerHTML')" in backgrounds.create.
+window.addEventListener('load', () => Reveal.initialize({
+  width: 1920, height: 1080, margin: 0, center: false, display: 'grid',
+  hash: true, controls: false, progress: false, transition: 'none',
+  ibm: { footer: 'The Elements of Context Engineering' },
+  keyboard: { 68: () => document.documentElement.classList.toggle('ibm-dark') },
+  // markdown must run before RevealIBM so the chrome lands on the generated slides
+  plugins: [ RevealMarkdown, RevealDiagrams, RevealNotes, RevealIBM ],
+}));
+// click to advance (shift-click goes back); links and media still work normally
+document.querySelector('.reveal').addEventListener('click', e => {
+  if (e.target.closest('a, button, video, audio, input, textarea')) return;
+  e.shiftKey ? Reveal.prev() : Reveal.next();
+});
+</script>
+</body>
+</html>

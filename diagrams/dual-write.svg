@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Dual-write: an agent meets a new architecture diagram and has two places to write it.
+     The two stores aren't kept in sync (shown on click). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- the new piece of information: an architecture diagram -->
+  <rect class="node" x="0" y="330" width="330" height="250"/>
+  <rect class="node" x="36" y="368" width="96" height="54"/>
+  <rect class="node" x="198" y="368" width="96" height="54"/>
+  <rect class="node" x="117" y="488" width="96" height="54"/>
+  <line class="edge plain" x1="132" y1="395" x2="198" y2="395"/>
+  <line class="edge plain" x1="84" y1="422" x2="140" y2="488"/>
+  <line class="edge plain" x1="246" y1="422" x2="190" y2="488"/>
+  <text class="title mid" x="165" y="625">new architecture diagram</text>
+
+  <line class="edge" x1="330" y1="455" x2="490" y2="455"/>
+
+  <!-- the agent, deciding -->
+  <text class="emoji mid" x="590" y="455">🤖</text>
+  <circle class="node accent-outline" cx="680" cy="340" r="34"/>
+  <text class="title mid" x="680" y="340">?</text>
+
+  <!-- two places to write it -->
+  <line class="edge" x1="670" y1="410" x2="960" y2="240"/>
+  <line class="edge" x1="670" y1="500" x2="960" y2="670"/>
+
+  <rect class="node" x="960" y="130" width="390" height="200"/>
+  <path class="node" d="M990 175 H1036 L1056 195 V285 H990 Z"/>
+  <line class="edge plain muted" x1="1002" y1="220" x2="1044" y2="220"/>
+  <line class="edge plain muted" x1="1002" y1="240" x2="1044" y2="240"/>
+  <line class="edge plain muted" x1="1002" y1="260" x2="1030" y2="260"/>
+  <text class="title" x="1086" y="225">team LLM wiki</text>
+  <text class="sm muted" x="1086" y="260">shared context</text>
+
+  <rect class="node" x="960" y="580" width="390" height="200"/>
+  <path class="node" d="M990 640 H1020 L1032 654 H1056 V730 H990 Z"/>
+  <text class="title" x="1086" y="690">Box</text>
+
+  <!-- click: they aren't kept in sync -->
+  <g class="fragment" data-fragment-index="1">
+    <line class="edge plain dashed muted" x1="1155" y1="330" x2="1155" y2="580"/>
+    <circle class="node" cx="1155" cy="455" r="26"/>
+    <text class="title accent mid" x="1155" y="455">✕</text>
+    <text class="sm muted" x="1196" y="448">not kept</text>
+    <text class="sm muted" x="1196" y="474">in sync</text>
+  </g>
+</svg>

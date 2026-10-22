@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Two people, two agents, two config readers, one repo. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="sm muted" x="0" y="60">roughly the same prompt, worded slightly differently</text>
+  <rect class="node" x="0" y="150" width="300" height="180"/>
+  <text class="title" x="24" y="200">person A</text>
+  <text class="sm muted" x="24" y="250">“add a config loader”</text>
+  <line class="edge" x1="300" y1="240" x2="360" y2="240"/>
+  <rect class="node fill" x="360" y="150" width="300" height="180"/>
+  <text class="title mid" x="510" y="240">agent 1</text>
+  <line class="edge" x1="660" y1="240" x2="720" y2="240"/>
+  <rect class="node" x="720" y="150" width="300" height="180"/>
+  <text class="sm mid" x="870" y="240">config_reader.py</text>
+
+  <rect class="node" x="0" y="585" width="300" height="180"/>
+  <text class="title" x="24" y="635">person B</text>
+  <text class="sm muted" x="24" y="685">“we need to read</text>
+  <text class="sm muted" x="24" y="712">settings from config”</text>
+  <line class="edge" x1="300" y1="675" x2="360" y2="675"/>
+  <rect class="node fill" x="360" y="585" width="300" height="180"/>
+  <text class="title mid" x="510" y="675">agent 2</text>
+  <line class="edge" x1="660" y1="675" x2="720" y2="675"/>
+  <rect class="node" x="720" y="585" width="300" height="180"/>
+  <text class="sm mid" x="870" y="675">settings/loader.py</text>
+
+  <path class="edge" d="M1020 240 H1050 V420 H1080"/>
+  <path class="edge" d="M1020 675 H1050 V495 H1080"/>
+  <rect class="node accent" x="1080" y="382" width="270" height="150"/>
+  <text class="sm on-accent mid" x="1215" y="430">one repo</text>
+  <text class="title on-accent mid" x="1215" y="480">which one wins?</text>
+</svg>

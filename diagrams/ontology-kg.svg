@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Ontology + knowledge graph: typed things, typed relationships. Click maps each type and
+     relationship to a published W3C vocabulary (PROV-O, Organization Ontology). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- edges -->
+  <line class="edge" x1="300" y1="95" x2="620" y2="95"/>
+  <line class="edge" x1="60" y1="150" x2="60" y2="560"/>
+  <line class="edge" x1="560" y1="300" x2="200" y2="150"/>
+  <line class="edge" x1="560" y1="410" x2="200" y2="560"/>
+  <line class="edge" x1="800" y1="355" x2="1050" y2="355"/>
+  <line class="edge" x1="1200" y1="410" x2="1200" y2="560"/>
+  <line class="edge" x1="1200" y1="670" x2="1200" y2="790"/>
+
+  <text class="sm muted" x="316" y="82">run with</text>
+  <text class="sm muted" x="76" y="350">used</text>
+  <text class="sm muted" x="400" y="190">decided in</text>
+  <text class="sm muted" x="400" y="530">based on</text>
+  <text class="sm muted" x="812" y="340">decided by</text>
+  <text class="sm muted end" x="1186" y="480">member of</text>
+  <text class="sm muted end" x="1186" y="728">part of</text>
+
+  <!-- nodes: type above, name below -->
+  <rect class="node" x="0" y="40" width="300" height="110"/>
+  <text class="sm muted" x="20" y="72">Meeting</text>
+  <text class="title" x="20" y="110">architecture review</text>
+
+  <rect class="node" x="620" y="40" width="300" height="110"/>
+  <text class="sm muted" x="640" y="72">Agent</text>
+  <text class="title" x="640" y="110">review agent</text>
+
+  <rect class="node" x="0" y="560" width="300" height="110"/>
+  <text class="sm muted" x="20" y="592">Document</text>
+  <text class="title" x="20" y="630">research note</text>
+
+  <rect class="node accent-outline" x="500" y="300" width="300" height="110"/>
+  <text class="sm muted" x="520" y="332">Decision</text>
+  <text class="title" x="520" y="370">ADR-007</text>
+
+  <rect class="node" x="1050" y="300" width="300" height="110"/>
+  <text class="sm muted" x="1070" y="332">Person</text>
+  <text class="title" x="1070" y="370">principal engineer</text>
+
+  <rect class="node" x="1050" y="560" width="300" height="110"/>
+  <text class="sm muted" x="1070" y="592">Team</text>
+  <text class="title" x="1070" y="630">Team A</text>
+
+  <rect class="node" x="1050" y="790" width="300" height="110"/>
+  <text class="sm muted" x="1070" y="822">Organization</text>
+  <text class="title" x="1070" y="860">IBM</text>
+
+  <!-- click: you don't have to invent these: published W3C vocabularies -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="mono sm accent" x="316" y="126">prov:wasAssociatedWith</text>
+    <text class="mono sm accent" x="76" y="376">prov:used</text>
+    <text class="mono sm accent" x="400" y="216">prov:wasGeneratedBy</text>
+    <text class="mono sm accent" x="400" y="556">prov:wasDerivedFrom</text>
+    <text class="mono sm accent" x="806" y="386">prov:wasAttributedTo</text>
+    <text class="mono sm accent end" x="1186" y="506">org:memberOf</text>
+    <text class="mono sm accent end" x="1186" y="754">org:unitOf</text>
+    <text class="mono sm accent" x="20" y="138">prov:Activity</text>
+    <text class="mono sm accent" x="640" y="138">prov:SoftwareAgent</text>
+    <text class="mono sm accent" x="20" y="658">prov:Entity</text>
+    <text class="mono sm accent" x="520" y="398">prov:Entity</text>
+    <text class="mono sm accent" x="1070" y="398">prov:Person</text>
+    <text class="mono sm accent" x="1070" y="658">org:OrganizationalUnit</text>
+    <text class="mono sm accent" x="1070" y="888">org:FormalOrganization</text>
+  </g>
+</svg>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The canonical shared context: every concept at once. People reach agents through a context workspace
+     (membership = ACL); every tool call goes through a policy engine; the shared context underneath is
+     layered, a knowledge graph with an ontology (CoALA memory types), a spec/ADR backbone, and a watched
+     consolidation step. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- edges first, so boxes sit on top -->
+  <line class="edge" x1="390" y1="100" x2="480" y2="100"/>
+  <line class="edge" x1="675" y1="180" x2="675" y2="250"/>
+  <line class="edge" x1="675" y1="400" x2="675" y2="460"/>
+  <path class="edge both" d="M870 500 H915 V100 H960"/>
+  <line class="edge both" x1="870" y1="560" x2="960" y2="560"/>
+  <line class="edge both" x1="675" y1="610" x2="675" y2="660"/>
+  <line class="edge plain dashed muted" x1="1155" y1="610" x2="1155" y2="720"/>
+  <line class="edge plain dashed muted" x1="195" y1="560" x2="195" y2="660"/>
+
+  <!-- people, through the channels they already use -->
+  <text class="agent mid" x="50" y="80">👩‍💻</text>
+  <text class="agent mid" x="140" y="80">🧑‍💻</text>
+  <text class="agent mid" x="230" y="80">🧑‍💼</text>
+  <text class="agent mid" x="320" y="80">🧑‍🎨</text>
+  <text class="sm mid" x="185" y="142">devs, PMs, designers</text>
+  <text class="sm muted mid" x="185" y="170">@ on Slack threads, GitHub</text>
+
+  <!-- context workspace -->
+  <rect class="node" x="480" y="20" width="390" height="160"/>
+  <text class="sm muted" x="504" y="56">context workspace</text>
+  <text class="title" x="504" y="102">#payments</text>
+  <text class="sm muted" x="504" y="142">known membership = the ACL</text>
+
+  <!-- agents -->
+  <rect class="node accent" x="480" y="250" width="390" height="150"/>
+  <text class="title on-accent mid" x="675" y="300">🤖 🤖 🤖  agents</text>
+  <text class="sm on-accent mid" x="675" y="340">their own auth and identity</text>
+  <text class="sm on-accent mid" x="675" y="368">roles + recipes: how it's done here</text>
+
+  <!-- policy engine -->
+  <rect class="node" x="480" y="460" width="390" height="150"/>
+  <text class="title mid" x="675" y="505">policy engine</text>
+  <text class="sm muted mid" x="675" y="543">every tool call: compare ACLs,</text>
+  <text class="sm muted mid" x="675" y="571">scope read-only, ask a human</text>
+
+  <!-- internal company info, with guardrails -->
+  <rect class="node" x="960" y="20" width="390" height="160"/>
+  <text class="title" x="984" y="80">internal company info</text>
+  <text class="sm muted" x="984" y="116">Box, email, docs, logs</text>
+  <text class="sm muted" x="984" y="144">connected, with guardrails</text>
+
+  <!-- humans -->
+  <rect class="node" x="960" y="460" width="390" height="150"/>
+  <text class="title" x="984" y="510">🧑 humans</text>
+  <text class="sm muted" x="984" y="548">scope, direction, approval</text>
+  <text class="sm muted" x="984" y="576">watch consolidation</text>
+
+  <!-- context layers -->
+  <text class="title" x="0" y="290">context layers</text>
+  <rect class="node" x="0" y="310" width="390" height="50"/>
+  <text class="sm mid" x="195" y="335">company-wide</text>
+  <rect class="node" x="0" y="370" width="192" height="50"/>
+  <rect class="node" x="198" y="370" width="192" height="50"/>
+  <text class="sm mid" x="96" y="395">org</text>
+  <text class="sm mid" x="294" y="395">org</text>
+  <rect class="node" x="0" y="430" width="126" height="50"/>
+  <rect class="node" x="132" y="430" width="126" height="50"/>
+  <rect class="node" x="264" y="430" width="126" height="50"/>
+  <text class="sm mid" x="63" y="455">product</text>
+  <text class="sm mid" x="195" y="455">product</text>
+  <text class="sm mid" x="327" y="455">product</text>
+  <rect class="node fill" x="0" y="490" width="60" height="50"/>
+  <rect class="node fill" x="66" y="490" width="60" height="50"/>
+  <rect class="node fill" x="132" y="490" width="60" height="50"/>
+  <rect class="node fill" x="198" y="490" width="60" height="50"/>
+  <rect class="node fill" x="264" y="490" width="60" height="50"/>
+  <rect class="node fill" x="330" y="490" width="60" height="50"/>
+  <text class="sm mid" x="195" y="515">teams</text>
+
+  <!-- the shared context itself -->
+  <rect class="group" x="0" y="660" width="1350" height="255"/>
+  <text class="sm muted" x="24" y="694">shared context, in every layer</text>
+  <rect class="node" x="24" y="720" width="420" height="170"/>
+  <text class="title" x="48" y="770">knowledge graph</text>
+  <text class="sm muted" x="48" y="806">an ontology, ACL'd</text>
+  <text class="sm muted" x="48" y="834">episodic · semantic · procedural</text>
+  <rect class="node" x="465" y="720" width="420" height="170"/>
+  <text class="title" x="489" y="770">specs + ADRs</text>
+  <text class="sm muted" x="489" y="806">the backbone the LLM wiki</text>
+  <text class="sm muted" x="489" y="834">hangs off</text>
+  <rect class="node" x="906" y="720" width="420" height="170"/>
+  <text class="title" x="930" y="770">consolidation</text>
+  <text class="sm muted" x="930" y="806">episodic → semantic, watched</text>
+  <text class="sm muted" x="930" y="834">aging and supersession</text>
+</svg>

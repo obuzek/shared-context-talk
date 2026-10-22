@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Deterministic vs. semantic: the same alert, before and after. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="title" x="0" y="60">deterministic</text>
+  <rect class="node fill" x="0" y="100" width="600" height="560"/>
+  <text class="sm muted" x="30" y="150">00:14  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="200">00:31  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="250">00:48  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="300">01:02  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="350">01:22  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="400">01:39  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="450">01:56  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="500">02:13  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="550">02:30  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <text class="sm muted" x="30" y="600">02:47  ALERT disk_io_p99 &gt; 0.8 prd-db-07</text>
+  <line class="edge accent" x1="600" y1="380" x2="720" y2="380"/>
+  <text class="title" x="720" y="60">semantic</text>
+  <rect class="node accent-outline" x="720" y="100" width="630" height="560"/>
+  <text x="750" y="220">“this alert has fired 10 times in the</text>
+  <text x="750" y="260">last three hours, and also fired at this</text>
+  <text x="750" y="300">same time of day in the last few weeks.</text>
+  <text x="750" y="380">I’ve inspected the logs and located</text>
+  <text x="750" y="420">issues.”</text>
+</svg>

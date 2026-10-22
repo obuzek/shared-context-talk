@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- A bridge built by committee: each agent owns a piece, the seams don't line up, the load test passes. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node accent" x="960" y="20" width="390" height="140"/>
+  <text class="title on-accent mid" x="1155" y="70">load test: passed</text>
+  <text class="sm on-accent mid" x="1155" y="120">declare success!</text>
+
+  <text class="sm muted" x="0" y="400">agent 1: the entrance</text>
+  <rect class="node fill" x="0" y="430" width="330" height="50"/>
+  <text class="sm muted" x="400" y="415">agent 2: the asphalt</text>
+  <rect class="node" x="340" y="442" width="1010" height="40"/>
+  <rect class="node" x="560" y="482" width="50" height="318"/>
+  <rect class="node" x="1000" y="468" width="50" height="332"/>
+  <text class="sm muted" x="560" y="850">agent 3: the supports</text>
+  <line class="edge plain muted" x1="0" y1="800" x2="1350" y2="800"/>
+
+  <circle class="node accent-outline" cx="335" cy="461" r="30"/>
+  <text class="title mid" x="335" y="461">?</text>
+  <circle class="node accent-outline" cx="1025" cy="475" r="30"/>
+  <text class="title mid" x="1025" y="475">?</text>
+</svg>

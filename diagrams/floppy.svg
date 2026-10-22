@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<?xml-stylesheet href="../talk.css" type="text/css"?>
+
+<!-- The model looks out at the world through one tiny floppy disk. After the speaker's draw.io sketch, reversed to read left to right:
+     model + tiny floppy -> magnifying glass (emoji) -> jillions of tiny boxes (pattern fill; fill="url(#tiny)" references the pattern, not a colour).
+     Chart layout, cols 2-4 (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <defs><pattern id="tiny" width="9" height="9" patternUnits="userSpaceOnUse"><rect class="node fill-strong" x="0" y="0" width="6" height="6"/></pattern></defs>
+  <rect class="node accent" x="107" y="287.0" width="26" height="26" rx="2"/>
+  <rect class="node" x="114.3" y="287.0" width="11.4" height="7.8"/>
+  <rect class="node" x="111.2" y="301.3" width="17.7" height="9.9"/>
+  <text class="lg mid math" x="120" y="410"><tspan class="var">mx</tspan> + <tspan class="var">b</tspan> = <tspan class="var">y</tspan></text>
+  <text class="sm muted mid" x="120" y="460">what the model sees:</text>
+  <text class="sm muted mid" x="120" y="488">one to three floppy disks</text>
+  <line class="edge" x1="149" y1="300" x2="250" y2="300"/>
+  <text class="emoji mid" x="320" y="300">🔎</text>
+  <line class="edge plain muted" x1="385" y1="260" x2="450" y2="0"/>
+  <line class="edge plain muted" x1="385" y1="340" x2="450" y2="600"/>
+  <rect x="450" y="0" width="900" height="600" fill="url(#tiny)"/>
+  <path class="edge plain" d="M450 620 q0 24 24 24 H876 q24 0 24 24 q0 -24 24 -24 H1326 q24 0 24 -24"/>
+  <text class="lg mid" x="900" y="728">zettabytes of data</text>
+</svg>

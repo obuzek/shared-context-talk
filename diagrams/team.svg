@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+
+<!-- 1 in 10 engineers vs the median: figure HEIGHT is proportional to monthly AI spend
+     (Jellyfish Q1 2026: median $52.38, 90th percentile $691.14, ratio 13.2x). Widths are equal on purpose.
+     Chart layout, cols 2-4 (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <circle class="node accent" cx="60" cy="77.0" r="17.0"/>
+  <rect class="node accent" x="43.0" y="98.0" width="34" height="602.0" rx="17.0"/>
+  <circle class="node" cx="195" cy="661.7" r="10.2"/>
+  <rect class="node" x="178.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="330" cy="661.7" r="10.2"/>
+  <rect class="node" x="313.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="465" cy="661.7" r="10.2"/>
+  <rect class="node" x="448.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="600" cy="661.7" r="10.2"/>
+  <rect class="node" x="583.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="735" cy="661.7" r="10.2"/>
+  <rect class="node" x="718.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="870" cy="661.7" r="10.2"/>
+  <rect class="node" x="853.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="1005" cy="661.7" r="10.2"/>
+  <rect class="node" x="988.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="1140" cy="661.7" r="10.2"/>
+  <rect class="node" x="1123.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <circle class="node" cx="1275" cy="661.7" r="10.2"/>
+  <rect class="node" x="1258.0" y="675.9" width="34" height="24.1" rx="17.0"/>
+  <line class="edge plain muted" x1="0" y1="700" x2="1350" y2="700"/>
+  <text class="lg" x="110" y="110">13×</text>
+  <text class="sm" x="110" y="150">1 in 10 engineers: ~$690 a month</text>
+  <text class="sm muted mid" x="735" y="611">the median engineer: ~$52 a month</text>
+  <path class="edge plain muted" d="M170 720 V735 H1300 V720"/>
+  <text class="sm muted mid" x="735" y="765">the other nine</text>
+  <text class="title" x="0" y="820">“The top 10% of engineers are about twice as productive as the median,</text>
+  <text class="title" x="0" y="858">and they spend 10x the tokens to get there.”</text>
+  <text class="sm muted" x="0" y="900">Nicholas Arcolano, Head of Research, Jellyfish (WorkOS interview, Aug 2026)</text>
+</svg>

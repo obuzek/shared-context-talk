@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Joe and MajorUnlicensedLibrary: a decision gets overridden, and the shared context says so. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node" x="0" y="60" width="390" height="260"/>
+  <text class="title mid" x="195" y="145">principal engineer</text>
+  <text class="sm muted mid" x="195" y="181">picks a framework,</text>
+  <text class="sm muted mid" x="195" y="211">due to licensing</text>
+  <text class="sm muted mid" x="195" y="241">and stability issues</text>
+  <rect class="node" x="480" y="60" width="390" height="260"/>
+  <text class="title mid" x="675" y="160">Joe and his agent</text>
+  <text class="sm muted mid" x="675" y="196">feature XYZ is much harder</text>
+  <text class="sm muted mid" x="675" y="226">with that framework</text>
+  <rect class="node" x="960" y="60" width="390" height="260"/>
+  <text class="title mid" x="1155" y="160">PR</text>
+  <text class="sm muted mid" x="1155" y="196">pulls in</text>
+  <text class="sm muted mid" x="1155" y="226">MajorUnlicensedLibrary</text>
+  <rect class="node" x="960" y="520" width="390" height="260"/>
+  <text class="title mid" x="1155" y="620">agent review</text>
+  <text class="sm muted mid" x="1155" y="656">auto-approved.</text>
+  <text class="sm muted mid" x="1155" y="686">it works!!</text>
+  <rect class="node accent" x="480" y="520" width="390" height="260"/>
+  <text class="title on-accent mid" x="675" y="620">shared context</text>
+  <text class="sm on-accent mid" x="675" y="656">“the decision was</text>
+  <text class="sm on-accent mid" x="675" y="686">overridden, NBD”</text>
+  <line class="edge" x1="390" y1="190" x2="480" y2="190"/>
+  <line class="edge" x1="870" y1="190" x2="960" y2="190"/>
+  <line class="edge" x1="1155" y1="320" x2="1155" y2="520"/>
+  <line class="edge accent" x1="960" y1="650" x2="870" y2="650"/>
+</svg>

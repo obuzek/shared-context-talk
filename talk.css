@@ -1,0 +1,164 @@
+/* Styles specific to this talk. ibm/ibm.css stays a faithful copy of the template. */
+
+/* Bio: name large across cols 1-2, role under it, bio text below the body line */
+.reveal .slides .media-half.bio > h2 { grid-column: 1 / 3; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .bio .role { color: var(--ibm-gray-60); margin-bottom: 1lh; }
+
+/* Chart slides that use a raster image (e.g. a published chart): keep its aspect ratio */
+.reveal .slides .chart > img { object-fit: contain; object-position: left top; }
+
+/* Gallup slide: legend strip above the cropped Technology panel */
+.reveal .slides .chart > .figure.gallup { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.reveal .slides .chart > .figure.gallup img { height: auto; max-height: 680px; max-width: 100%; }
+.reveal .slides .chart > .figure.gallup img.legend { width: 80%; max-height: none; }
+
+/* Diagram math: italic variables (e.g. the "mx + b = y" model on the floppy-disk slide) */
+.ibm-diagram text.math { font-weight: 300; }
+.ibm-diagram text .var { font-style: italic; font-weight: 400; }
+
+/* Floppy-disk slide: the field of tiny boxes, darker than .node.fill so 6px squares still read */
+.ibm-diagram .node.fill-strong { fill: var(--ibm-gray-50, #8d8d8d); stroke: none; }
+.ibm-diagram text.emoji { font-size: 120px; }
+
+/* ---- Chat / message bubbles (standard) -------------------------------------
+   <div class="chat">
+     <p class="msg user">What the person said</p>
+     <p class="msg agent">What the agent said</p>
+   </div>
+   Agent bubbles sit left (grey), user bubbles sit right (blue). On a .chart
+   slide the chat takes the description slot in column 1. */
+.reveal .chat { display: flex; flex-direction: column; gap: 16px; }
+.reveal .chat .msg { margin: 0; padding: 18px 24px; border-radius: 24px; font-size: 24px; line-height: var(--ibm-lh-110); max-width: 92%; }
+.reveal .chat .msg.agent { align-self: flex-start; background: var(--ibm-gray-10); color: var(--ibm-text); border-bottom-left-radius: 6px; }
+.reveal .chat .msg.user { align-self: flex-end; background: var(--ibm-blue); color: #fff; border-bottom-right-radius: 6px; }
+.reveal .slides .chart > .chat { grid-area: 2 / 1 / -1 / 2; align-self: start; }
+
+/* ---- Context box (standard): a code box showing what the agent actually gets as text ----
+   <pre class="context"><code>...</code></pre>
+   On media-half slides it sits bottom-left, across columns 1-2, above the footer. */
+.reveal pre.context { font-size: 20px; line-height: 1.45; border-left: 4px solid var(--ibm-blue); }
+.reveal pre.context code { padding: 36px 44px; white-space: pre; }
+.reveal .slides .media-half > pre.context { position: absolute; left: 45px; width: 870px; bottom: 105px; }
+
+/* ---- Embeds (standard): a live third-party embed, e.g. a Bluesky post ----
+   <div class="figure embed"><iframe src="https://embed.bsky.app/embed/..."></iframe></div>
+   Centred in the chart layout's figure area. */
+.reveal .slides .chart > .figure.embed { display: flex; justify-content: center; align-items: flex-start; }
+.reveal .figure.embed iframe { width: 600px; height: 900px; border: 0; }
+
+/* ---- Pull quote (standard) ----------------------------------------------------
+   <blockquote class="quote">
+     <p>Quoted words, without quotation marks</p>
+     <cite><strong>Context line</strong><br>Source, date</cite>
+   </blockquote>
+   Big blue opening mark, light text, muted citation. On callout slides it takes
+   the text slot (cols 3-4) at a size that fits a long quote. */
+.reveal blockquote.quote { border-left: 0; padding: 0; position: relative; }
+.reveal blockquote.quote::before { content: "\201C"; position: absolute; left: -0.08em; top: -0.12em; font-size: 180px; line-height: 1; font-weight: 300; color: var(--ibm-blue); }
+.reveal blockquote.quote > p { padding-top: 120px; font-size: 44px; font-weight: 300; line-height: var(--ibm-lh-110); }
+.reveal blockquote.quote > p::after { content: "\201D"; }
+.reveal blockquote.quote cite { display: block; margin-top: 40px; font-style: normal; font-size: 20px; line-height: var(--ibm-lh-120); color: var(--ibm-gray-60); }
+.reveal blockquote.quote cite strong { color: var(--ibm-text); font-weight: 500; }
+.reveal .slides .callout > blockquote.quote { font-size: 44px; }
+
+/* ---- Video (standard): a local clip in the chart layout's figure area ----
+   <div class="figure video"><video src="img/clip.mp4" data-autoplay loop muted playsinline></video></div> */
+.reveal .slides .chart > .figure.video { display: flex; justify-content: center; align-items: flex-start; }
+.reveal .figure.video video { max-width: 100%; max-height: 915px; height: auto; }
+
+/* media-half / media-3q: show the whole picture instead of cropping it to fill the box */
+.reveal .slides :is(.media-half, .media-3q) > img.media.contain { object-fit: contain; object-position: center top; background: none; }
+
+/* ---- Section dividers: IBM Blue 60 background, white type (same in light and dark decks) ----
+   Restates the colour tokens the way ibm.css does for .dark, so the footer, slide number
+   and rules turn white along with the title. */
+.reveal .slides section.section-divider {
+  --ibm-bg: #0f62fe;
+  --ibm-text: #ffffff;
+  --ibm-blue: #ffffff;
+  --ibm-gray-60: #d0e2ff;
+  --ibm-gray-20: #4589ff;
+  --ibm-gray-10: #0043ce;
+  --ibm-rule: 1px solid #ffffff;
+  --ibm-line: linear-gradient(#ffffff, #ffffff);
+  background-color: var(--ibm-bg) !important;
+  color: var(--ibm-text);
+}
+.reveal .slides section.section-divider > :is(h1, h2) { color: var(--ibm-text); }
+.ibm-diagram text.mono { font-family: var(--ibm-mono, "IBM Plex Mono", monospace); font-size: 26px; font-weight: 400; }
+
+/* Questions in a 2x2 (boxes-4) grid: larger, lighter type since there are no answers underneath */
+.reveal .slides .boxes-4.questions > .box { font-size: 44px; font-weight: 300; line-height: var(--ibm-lh-110); }
+.reveal .slides .boxes-4.questions > .box strong { font-weight: 300; }
+
+/* ---- Point → implication rows (standard): point in cols 1-2, arrow in the gutter, implication in cols 3-4 ----
+   <div class="implies">
+     <p class="point">Agent has its own workspace</p>
+     <p class="implication">…what that means</p>   (repeat the pair per row)
+   </div> */
+.reveal .slides > section > .implies {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 870px 870px;
+  column-gap: var(--ibm-gutter);
+  font-size: 32px; line-height: var(--ibm-lh-110);
+}
+.reveal .slides .implies > p { margin: 0; padding: 24px 0 36px; border-top: var(--ibm-rule); }
+.reveal .implies > .implication { position: relative; color: var(--ibm-gray-60); }
+.reveal .implies > .implication::before {
+  content: "→"; position: absolute; left: -72px; top: 20px;
+  color: var(--ibm-blue); font-size: 40px; line-height: 1;
+}
+
+/* Diagram extras: a mid-size emoji (agents in the factory), blue text for "what it enables"
+   callouts, and an unfilled blue outline that highlights one part of a diagram on click. */
+.ibm-diagram text.agent { font-size: 56px; }
+.ibm-diagram text.accent { fill: var(--ibm-blue, #0f62fe); }
+.ibm-diagram .highlight { fill: none; stroke: var(--ibm-blue, #0f62fe); stroke-width: 4px; }
+
+/* ---- Hand-drawn diagram (standard): for imagined projections, not real data ----
+   <svg class="ibm-diagram sketch"> with a <filter id="rough"> in its <defs>; lines wobble and
+   text.hand uses a handwriting face (macOS ships Bradley Hand, so it works offline). */
+.ibm-diagram.sketch :is(path, line) { stroke-width: 3px; stroke-linecap: round; stroke-linejoin: round; filter: url(#rough); }
+.ibm-diagram text.hand { font-family: "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive; font-size: 30px; font-weight: 400; }
+.ibm-diagram text.hand.sm { font-size: 24px; }
+
+/* Chart layout: a stack of short cited facts in column 1 (instead of one description p)
+   <div class="cites"><p>Fact.</p><p class="cite">Source, date</p>...</div> */
+.reveal .slides .chart > .cites { grid-area: 2 / 1 / -1 / 2; display: flex; flex-direction: column; gap: 12px; }
+.reveal .slides .chart > .cites > p { margin: 0; }
+.reveal .slides .chart > .cites > p.cite { font-size: 20px; color: var(--ibm-gray-60); margin-bottom: 36px; }
+.ibm-diagram text.mono.sm { font-size: 20px; }
+
+/* ---- Metrics 2x2 (boxes-4.metrics): question, DORA metric, then the benchmark moving from low to elite ----
+   <div class="box"><p class="q">..</p><p class="metric">..</p><p class="from">low</p><p class="to">elite</p></div>
+   An optional <p class="aside"> fills the empty lower-left cell. */
+.reveal .slides .boxes-4.metrics > .box { gap: 10px; }
+.reveal .slides .boxes-4.metrics > .box p { margin: 0; }
+.reveal .slides .boxes-4.metrics .q { font-size: 28px; font-weight: 400; }
+.reveal .slides .boxes-4.metrics .metric { font-size: 20px; color: var(--ibm-gray-60); margin-bottom: 14px; }
+.reveal .slides .boxes-4.metrics .from { font-size: 32px; color: var(--ibm-gray-60); text-decoration: line-through; }
+.reveal .slides .boxes-4.metrics .from::after { content: "  ↓"; display: inline-block; text-decoration: none; margin-left: 12px; color: var(--ibm-blue); }
+.reveal .slides .boxes-4.metrics .to { font-size: 44px; color: var(--ibm-blue); line-height: 1; }
+.reveal .slides .boxes-4.metrics > .aside { grid-area: 2 / 1 / 3 / 3; align-self: end; font-size: 28px; padding-right: 90px; }
+.reveal .slides .boxes-4.metrics > .aside cite { display: block; margin-top: 12px; font-size: 20px; font-style: normal; color: var(--ibm-gray-60); }
+
+/* ---- Landscape table (standard): logo | name | what it offers + what it solves ----
+   <div class="landscape"><div class="row"><img src="img/logos/x.png" alt=""><p class="name">..</p>
+   <div class="what"><p>offers</p><p class="solves">solves: ..</p></div></div>...</div>
+   Logos sit on a white tile so dark-on-transparent marks stay visible in dark mode. */
+.reveal .slides > section > .landscape { grid-column: 1 / -1; display: flex; flex-direction: column; }
+.reveal .landscape .row { display: grid; grid-template-columns: 64px 330px 1fr; column-gap: 32px; align-items: center; padding: 14px 0; border-top: var(--ibm-rule); }
+.reveal .landscape .row img { width: 64px; height: 64px; margin: 0; padding: 4px; box-sizing: border-box; background: #fff; border-radius: 8px; object-fit: contain; }
+.reveal .landscape .row p { margin: 0; }
+.reveal .landscape .name { font-size: 28px; }
+.reveal .landscape .what p { font-size: 22px; line-height: var(--ibm-lh-120); }
+.reveal .landscape .what .solves { font-size: 20px; color: var(--ibm-blue); }
+.reveal .slides > section > p.gap-note { grid-column: 1 / -1; font-size: 24px; color: var(--ibm-gray-60); margin: -60px 0 20px; }
+
+/* ---- Borrowed slides (standard): a colleague's slide shown whole on its own black ----
+   <!-- .slide: class="media-full borrowed dark" style="--ibm-bg: #000000" -->
+   <img class="media" src="..."> (stack several with class="fragment current-visible" for builds)
+   <p class="credit">Slides: …</p> */
+.reveal .slides .media-full.borrowed > img.media { object-fit: contain; background: none; }
+.reveal .slides .media-full.borrowed > .credit { position: absolute; right: 45px; bottom: 30px; margin: 0; font-size: 16px; color: var(--ibm-gray-60); }

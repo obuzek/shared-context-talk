@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Context layer scoping: a layer cake. Small team shared contexts at the bottom, then product,
+     org, and company-wide. Clicks build it upward. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- team shared contexts: the base -->
+  <rect class="node" x="0" y="700" width="205" height="170"/>
+  <text class="title" x="20" y="756">Team A</text>
+  <text class="sm muted" x="20" y="792">tasks, runbooks</text>
+  <rect class="node" x="229" y="700" width="205" height="170"/>
+  <text class="title" x="249" y="756">Team B</text>
+  <rect class="node" x="458" y="700" width="205" height="170"/>
+  <text class="title" x="478" y="756">Team C</text>
+  <rect class="node" x="687" y="700" width="205" height="170"/>
+  <text class="title" x="707" y="756">Team D</text>
+  <rect class="node" x="916" y="700" width="205" height="170"/>
+  <text class="title" x="936" y="756">Team E</text>
+  <rect class="node" x="1145" y="700" width="205" height="170"/>
+  <text class="title" x="1165" y="756">Team F</text>
+  <g class="fragment" data-fragment-index="1">
+    <rect class="node" x="0" y="490" width="434" height="170"/>
+    <text class="title" x="20" y="546">Product 1</text>
+    <text class="sm muted" x="20" y="582">architecture, specs, ADRs</text>
+    <rect class="node" x="458" y="490" width="434" height="170"/>
+    <text class="title" x="478" y="546">Product 2</text>
+    <rect class="node" x="916" y="490" width="434" height="170"/>
+    <text class="title" x="936" y="546">Product 3</text>
+  </g>
+  <g class="fragment" data-fragment-index="2">
+    <rect class="node" x="0" y="280" width="663" height="170"/>
+    <text class="title" x="20" y="336">Org 1</text>
+    <text class="sm muted" x="20" y="372">priorities, roadmaps</text>
+    <rect class="node" x="687" y="280" width="663" height="170"/>
+    <text class="title" x="707" y="336">Org 2</text>
+  </g>
+  <g class="fragment" data-fragment-index="3">
+    <rect class="node" x="0" y="70" width="1350" height="170"/>
+    <text class="title" x="20" y="126">company-wide</text>
+    <text class="sm muted" x="20" y="162">policies, standards</text>
+  </g>
+</svg>

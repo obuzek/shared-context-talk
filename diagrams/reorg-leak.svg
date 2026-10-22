@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The reorg leak: the agent sees both, and writes to the issue. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node" x="0" y="80" width="390" height="150"/>
+  <text class="title mid" x="195" y="140">personal email</text>
+  <text class="sm muted mid" x="195" y="176">the manager’s own account</text>
+  <rect class="node" x="0" y="520" width="390" height="150"/>
+  <text class="title mid" x="195" y="580">shared context</text>
+  <text class="sm muted mid" x="195" y="616">Team A + Team B, work tracking</text>
+  <rect class="node accent" x="480" y="300" width="390" height="150"/>
+  <text class="title on-accent mid" x="675" y="360">manager’s agent</text>
+  <text class="sm on-accent mid" x="675" y="396">acting on their behalf</text>
+  <path class="edge" d="M390 155 H435 V350 H480"/>
+  <path class="edge both" d="M390 595 H435 V400 H480"/>
+  <rect class="node fill" x="480" y="560" width="390" height="250"/>
+  <text class="sm muted" x="504" y="600">system prompt:</text>
+  <text class="sm" x="504" y="650">“DO NOT SHARE INFORMATION</text>
+  <text class="sm" x="504" y="680">FROM MY PERSONAL EMAIL</text>
+  <text class="sm" x="504" y="710">TO THE TEAM!!!”</text>
+  <line class="edge plain dashed muted" x1="675" y1="450" x2="675" y2="560"/>
+  <line class="edge accent" x1="870" y1="375" x2="960" y2="375"/>
+  <rect class="node accent-outline" x="960" y="200" width="390" height="350"/>
+  <text class="sm muted" x="984" y="245">issue, Team A</text>
+  <text x="984" y="310">“reassigning Team A’s</text>
+  <text x="984" y="345">issues to Team B,</text>
+  <text x="984" y="380">because Team A is part</text>
+  <text x="984" y="415">of Monday’s reorg</text>
+  <text x="984" y="450">announcement”</text>
+</svg>

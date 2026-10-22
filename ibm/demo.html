@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>IBM template layouts</title>
+<link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
+<link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="ibm.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="picto" viewBox="0 0 96 96"><g fill="none" stroke="#000" stroke-width="2"><circle cx="48" cy="48" r="40"/><path d="M28 48h40M48 28v40"/></g></symbol>
+  <symbol id="icon" viewBox="0 0 32 32"><g fill="none" stroke="#000" stroke-width="2"><rect x="4" y="4" width="24" height="24"/><path d="M10 16h12"/></g></symbol>
+</svg>
+<div class="reveal"><div class="slides">
+
+<!-- 1-6 covers -->
+<section class="cover">
+  <h1>Presentation title goes here in sentence case</h1>
+  <div class="meta"><p>Presenter name<br>Title, IBM</p><p>Event name<br>October 2026</p></div>
+</section>
+<section class="cover cyan">
+  <h1>Cover, cyan</h1>
+  <div class="meta"><p>Presenter name<br>Title, IBM</p><p>Event name<br>October 2026</p></div>
+</section>
+<section class="cover imagery">
+  <div class="media"></div>
+  <h1>Cover, imagery</h1>
+  <div class="meta"><p>Presenter name</p><p>October 2026</p></div>
+</section>
+<section class="cover">
+  <h1>Cover, plain, label</h1>
+  <div class="meta label"><p>Label text goes here</p></div>
+</section>
+<section class="cover half">
+  <p class="label">Label</p>
+  <h1>Cover, imagery, half, label</h1>
+  <div class="media"></div>
+</section>
+
+<!-- 7-11 -->
+<section class="contents">
+  <h2>Contents</h2>
+  <ol class="plain">
+    <li>01 Introduction</li><li>02 The problem</li><li>03 Our approach</li><li>04 Results</li>
+    <li>05 Architecture</li><li>06 Roadmap</li><li>07 Next steps</li><li>08 Q&amp;A</li>
+  </ol>
+</section>
+<section class="section-divider"><h2>Section divider title goes here</h2></section>
+<section class="large-text"><h2>Large text for one big idea</h2></section>
+<section class="callout">
+  <h2>Callout headline</h2>
+  <p>Callout text that supports the headline and stays short</p>
+</section>
+<section class="callout-solo"><p>A stand-alone callout statement in eighty-four point type</p></section>
+
+<!-- 12-15 data -->
+<section class="data-2v">
+  <div class="stat"><p>Description of the first data point, kept to a few lines</p><div class="num">↗︎40M</div></div>
+  <div class="stat"><p>Description of the second data point, kept to a few lines</p><div class="num">+73%</div></div>
+</section>
+<section class="data-3v">
+  <h2>Data, 3 callouts, vertical</h2>
+  <div class="stat"><div class="num">45%</div><p>Explanation of the first number</p></div>
+  <div class="stat"><div class="num">3x</div><p>Explanation of the second number</p></div>
+  <div class="stat"><div class="num">12k</div><p>Explanation of the third number</p></div>
+  <p class="source">Source: IBM Institute for Business Value, 2026</p>
+</section>
+<section class="data-2h">
+  <div class="stat"><div class="num">+120%</div><p>First horizontal callout</p></div>
+  <div class="stat"><div class="num">+40M</div><p>Second horizontal callout</p></div>
+</section>
+<section class="data-3h">
+  <h2>Data, 3 callouts, horizontal</h2>
+  <div class="stat"><div class="num">45%</div><p>Explanation of the first number in a couple of lines</p></div>
+  <div class="stat"><div class="num">3x</div><p>Explanation of the second number</p></div>
+  <div class="stat"><div class="num">12k</div><p>Explanation of the third number</p></div>
+  <p class="source">Source: footnote text</p>
+</section>
+
+<!-- 16-26 text -->
+<section class="cols-4" data-footer="IBM / Footer override example">
+  <h2>Text, 4 columns</h2>
+  <div class="col"><p>Body copy in twenty point Plex Sans Regular. Keep columns to a short paragraph or two.</p></div>
+  <div class="col"><p>Second column of body copy.</p><ul><li>List item</li><li>List item<ul><li>Nested item</li></ul></li></ul></div>
+  <div class="col"><p>Third column of body copy.</p></div>
+  <div class="col"><p>Fourth column of body copy.</p></div>
+</section>
+<section class="cols-4 dividers-short">
+  <h2>Text, 4 columns, short dividers</h2>
+  <p class="intro">Optional introduction text sits in the second column</p>
+  <div class="col"><p>Column one</p></div>
+  <div class="col"><p>Column two</p></div>
+  <div class="col"><p>Column three</p></div>
+  <div class="col"><p>Column four</p></div>
+</section>
+<section class="cols-4 dividers">
+  <h2>Text, 4 columns, dividers, headlines</h2>
+  <div class="col"><h3>Headline one</h3><p>Body copy under the first headline.</p></div>
+  <div class="col"><h3>Headline two</h3><p>Body copy under the second headline.</p></div>
+  <div class="col"><h3>Headline three</h3><p>Body copy under the third headline.</p></div>
+</section>
+<section class="cols-4 dividers">
+  <h2>Text, 4 columns, dividers, pictograms</h2>
+  <div class="col lead"><p>Lead statement in the first column</p></div>
+  <div class="col"><svg class="picto"><use href="#picto"/></svg><p>Body copy beside a pictogram.</p></div>
+  <div class="col"><svg class="picto"><use href="#picto"/></svg><p>Body copy beside a pictogram.</p></div>
+  <div class="col"><svg class="picto"><use href="#picto"/></svg><p>Body copy beside a pictogram.</p></div>
+</section>
+<section class="halves">
+  <h2>Text, 2 wide columns</h2>
+  <div class="col"><p>A wide column of body text at the master's 36px size.</p><ul><li>Point one</li><li>Point two</li></ul></div>
+  <div class="col"><p>The second wide column.</p></div>
+</section>
+<section class="cols-2">
+  <h2>Text, 2 columns, large title</h2>
+  <div class="col"><p>Body copy in the third column, 28px Light.</p></div>
+  <div class="col"><p>Body copy in the fourth column.</p></div>
+</section>
+<section class="cols-2 sm-title dividers">
+  <h2>Text, 2 columns, dividers, small title</h2>
+  <div class="col"><h3>Headline</h3><p>Body copy under the headline.</p></div>
+  <div class="col"><h3>Headline</h3><p>Body copy under the headline.</p></div>
+</section>
+
+<!-- 27-35 boxes -->
+<section class="boxes-4">
+  <p class="label">Label</p>
+  <h2>Boxes, 4 stacked, small title</h2>
+  <div class="box"><p>Box one text</p></div><div class="box"><p>Box two text</p></div>
+  <div class="box"><p>Box three text</p></div><div class="box"><p>Box four text</p></div>
+</section>
+<section class="boxes-4h lg-title">
+  <h2>Boxes, 4 horizontal, large title</h2>
+  <div class="box"><p>Box one</p></div><div class="box"><p>Box two</p></div>
+  <div class="box"><p>Box three</p></div><div class="box"><p>Box four</p></div>
+</section>
+<section class="boxes-6 rules">
+  <h2>Boxes, 6 stacked, icons</h2>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box one</p></div>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box two</p></div>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box three</p></div>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box four</p></div>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box five</p></div>
+  <div class="box"><svg class="icon"><use href="#icon"/></svg><p>Box six</p></div>
+</section>
+<section class="boxes-6alt lg-title">
+  <h2>Boxes, 6 stacked, alternate</h2>
+  <div class="box"><p>Box one</p></div><div class="box"><p>Box two</p></div>
+  <div class="box"><p>Box three</p></div><div class="box"><p>Box four</p></div>
+  <div class="box"><p>Box five</p></div><div class="box"><p>Box six</p></div>
+</section>
+<section class="boxes-4wide">
+  <div class="box"><svg class="picto"><use href="#picto"/></svg><p>Wide box one</p></div>
+  <div class="box"><svg class="picto"><use href="#picto"/></svg><p>Wide box two</p></div>
+  <div class="box"><svg class="picto"><use href="#picto"/></svg><p>Wide box three</p></div>
+  <div class="box"><svg class="picto"><use href="#picto"/></svg><p>Wide box four</p></div>
+</section>
+
+<!-- 36-40 imagery -->
+<section class="media-half">
+  <h2>Video or imagery, half, inset</h2>
+  <p>Text beside the picture.</p>
+  <p>Second text column.</p>
+  <div class="media"></div>
+</section>
+<section class="media-3q">
+  <h2>Imagery, 3/4, bleed</h2>
+  <p>Text beside the picture.</p>
+  <div class="media"></div>
+</section>
+<section class="media-3q inset">
+  <h2>Imagery, 3/4, inset</h2>
+  <p>Text beside the picture.</p>
+  <div class="media"></div>
+</section>
+<section class="media-full inset"><div class="media"></div></section>
+
+<!-- 41-48 -->
+<section class="contacts">
+  <h2>Contacts</h2>
+  <div class="person"><div class="media"></div><div><p>Name Surname</p><p class="muted">Role, IBM</p></div></div>
+  <div class="person"><div class="media"></div><div><p>Name Surname</p><p class="muted">Role, IBM</p></div></div>
+  <div class="person"><div class="media"></div><div><p>Name Surname</p><p class="muted">Role, IBM</p></div></div>
+  <div class="person"><div class="media"></div><div><p>Name Surname</p><p class="muted">Role, IBM</p></div></div>
+</section>
+<section class="table">
+  <h2>Table</h2>
+  <table>
+    <thead><tr><th>Header</th><th>Header</th><th>Header</th></tr></thead>
+    <tbody>
+      <tr><td>Row text</td><td>Row text</td><td>Row text</td></tr>
+      <tr><td>Row text</td><td>Row text</td><td>Row text</td></tr>
+      <tr><td>Row text</td><td>Row text</td><td>Row text</td></tr>
+    </tbody>
+  </table>
+</section>
+<section class="chart">
+  <h2>Chart</h2>
+  <p>Short description of what the chart shows.</p>
+  <svg class="figure" viewBox="0 0 1350 915" preserveAspectRatio="none">
+    <g font-family="IBM Plex Sans" font-size="20">
+      <rect x="60" y="415" width="160" height="440" fill="var(--ibm-chart-1)"/>
+      <rect x="300" y="255" width="160" height="600" fill="var(--ibm-chart-2)"/>
+      <rect x="540" y="515" width="160" height="340" fill="var(--ibm-chart-3)"/>
+      <rect x="780" y="155" width="160" height="700" fill="var(--ibm-chart-4)"/>
+      <rect x="1020" y="355" width="160" height="500" fill="var(--ibm-chart-5)"/>
+      <line x1="0" y1="855" x2="1350" y2="855" stroke="#000"/>
+    </g>
+  </svg>
+  <p class="source">Source: example data</p>
+</section>
+<section class="legal two">
+  <h2>Legal</h2>
+  <div><p>© 2026 International Business Machines Corporation. Copy and paste appropriate legal disclaimer text here. This is placeholder text for the two-column legal disclaimer layout, set in 16px Plex Sans Regular at 120% line spacing.</p><p>Second paragraph of disclaimer text.</p></div>
+</section>
+<section class="blank"><h2>Blank slide</h2></section>
+<section>
+  <h2>Default (master) layout</h2>
+  <p>Body text at the master's 36px Light with 110% spacing.</p>
+  <ul><li>Second-level list item</li><li>Another item<ul><li>Third level</li></ul></li></ul>
+</section>
+<section class="end"></section>
+
+</div></div>
+<script src="../node_modules/reveal.js/dist/reveal.js"></script>
+<script src="ibm.js"></script>
+<script>
+Reveal.initialize({
+  width: 1920, height: 1080, margin: 0, center: false, display: 'grid',
+  hash: true, controls: false, progress: false, transition: 'none',
+  ibm: { footer: 'IBM / Demo footer' },
+  plugins: [ RevealIBM ],
+});
+</script>
+</body>
+</html>

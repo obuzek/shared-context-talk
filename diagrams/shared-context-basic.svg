@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The naive shared context: a git repo, updated by 1-2 people. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node accent" x="0" y="0" width="330" height="90"/>
+  <text class="title on-accent mid" x="165" y="45">teammate 1</text>
+  <line class="edge accent" x1="330" y1="45" x2="480" y2="45"/>
+  <rect class="node accent" x="0" y="120" width="330" height="90"/>
+  <text class="title on-accent mid" x="165" y="165">teammate 2</text>
+  <line class="edge accent" x1="330" y1="165" x2="480" y2="165"/>
+  <rect class="node" x="0" y="240" width="330" height="90"/>
+  <text class="title mid" x="165" y="285">teammate 3</text>
+  <line class="edge plain dashed muted" x1="330" y1="285" x2="480" y2="285"/>
+  <rect class="node" x="0" y="360" width="330" height="90"/>
+  <text class="title mid" x="165" y="405">teammate 4</text>
+  <line class="edge plain dashed muted" x1="330" y1="405" x2="480" y2="405"/>
+  <rect class="node" x="0" y="480" width="330" height="90"/>
+  <text class="title mid" x="165" y="525">teammate 5</text>
+  <line class="edge plain dashed muted" x1="330" y1="525" x2="480" y2="525"/>
+  <text class="sm muted" x="0" y="650">two people are submitting to the wiki</text>
+  <text class="sm muted" x="0" y="678">with every PR. the other 3 aren’t.</text>
+  <rect class="node" x="480" y="0" width="870" height="600"/>
+  <text class="sm muted" x="504" y="44">git repository</text>
+  <rect class="node fill" x="525" y="80" width="380" height="220"/>
+  <text class="title mid" x="715" y="175">the harness</text>
+  <text class="sm muted mid" x="715" y="211">versioned</text>
+  <rect class="node fill" x="935" y="80" width="380" height="220"/>
+  <text class="title mid" x="1125" y="175">a wiki</text>
+  <text class="sm muted mid" x="1125" y="211">maybe OKF-based</text>
+  <rect class="node fill" x="525" y="340" width="380" height="220"/>
+  <text class="title mid" x="715" y="450">skills</text>
+  <rect class="node fill" x="935" y="340" width="380" height="220"/>
+  <text class="title mid" x="1125" y="450">procedures</text>
+  <line class="edge both" x1="915" y1="600" x2="915" y2="720"/>
+  <rect class="node" x="720" y="720" width="390" height="150"/>
+  <text class="title mid" x="915" y="780">JIRA</text>
+  <text class="sm muted mid" x="915" y="816">central work tracker</text>
+</svg>

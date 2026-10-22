@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Islands: every team keeps its own shared context; anything bigger than one team has no home,
+     gets copied into each, and drifts (click). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- knowledge bigger than one team, with no shared home -->
+  <rect class="group" x="0" y="40" width="1350" height="280"/>
+  <text class="sm muted" x="24" y="76">bigger than one team</text>
+  <rect class="node" x="90" y="120" width="330" height="140"/>
+  <text class="title mid" x="255" y="180">product architecture</text>
+  <text class="sm muted mid" x="255" y="216">where does it live?</text>
+  <rect class="node" x="510" y="120" width="330" height="140"/>
+  <text class="title mid" x="675" y="180">org priorities</text>
+  <text class="sm muted mid" x="675" y="216">where does it live?</text>
+  <rect class="node" x="930" y="120" width="330" height="140"/>
+  <text class="title mid" x="1095" y="180">security policy</text>
+  <text class="sm muted mid" x="1095" y="216">where does it live?</text>
+
+  <!-- copied down into every team, by hand -->
+  <line class="edge dashed muted" x1="1095" y1="320" x2="120" y2="500"/>
+  <line class="edge dashed muted" x1="1095" y1="320" x2="397" y2="500"/>
+  <line class="edge dashed muted" x1="1095" y1="320" x2="675" y2="500"/>
+  <line class="edge dashed muted" x1="1095" y1="320" x2="952" y2="500"/>
+  <line class="edge dashed muted" x1="1095" y1="320" x2="1230" y2="500"/>
+  <text class="sm muted" x="24" y="420">copied into each team</text>
+
+  <!-- the islands -->
+  <rect class="node" x="0" y="500" width="240" height="260"/>
+  <text class="title" x="24" y="550">Team A</text>
+  <text class="sm muted" x="24" y="584">its own wiki</text>
+  <rect class="node" x="277" y="500" width="240" height="260"/>
+  <text class="title" x="301" y="550">Team B</text>
+  <text class="sm muted" x="301" y="584">its own wiki</text>
+  <rect class="node" x="555" y="500" width="240" height="260"/>
+  <text class="title" x="579" y="550">Team C</text>
+  <text class="sm muted" x="579" y="584">its own wiki</text>
+  <rect class="node" x="832" y="500" width="240" height="260"/>
+  <text class="title" x="856" y="550">Team D</text>
+  <text class="sm muted" x="856" y="584">its own wiki</text>
+  <rect class="node" x="1110" y="500" width="240" height="260"/>
+  <text class="title" x="1134" y="550">Team E</text>
+  <text class="sm muted" x="1134" y="584">its own wiki</text>
+
+  <!-- click: and the copies drift -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="sm" x="24" y="660">security policy</text>
+    <text class="title accent" x="24" y="700">v3</text>
+    <text class="sm" x="301" y="660">security policy</text>
+    <text class="title accent" x="301" y="700">v1</text>
+    <text class="sm" x="579" y="660">security policy</text>
+    <text class="title accent" x="579" y="700">v2, edited</text>
+    <text class="sm" x="856" y="660">security policy</text>
+    <text class="title accent" x="856" y="700">v1</text>
+    <text class="sm" x="1134" y="660">security policy</text>
+    <text class="title accent" x="1134" y="700">missing</text>
+    <text class="sm muted mid" x="675" y="830">at least 80–120 versions of shared context at IBM</text>
+  </g>
+</svg>

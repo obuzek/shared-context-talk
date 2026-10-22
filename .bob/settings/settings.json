@@ -1,0 +1,43 @@
+"approval": {
+  "allowed_permissions": [
+    "mcp",
+    "mode",
+    "subtask",
+    "subagent",
+    "skill",
+    "todo",
+    "read",
+    "execute"
+  ],
+  "permissionOptions": [
+    {
+      "groupId": "read",
+      "enableOutsideWorkspace": true
+    }
+  ],
+  "allowedExecutors": [
+    {
+      "toolId": "execute_command",
+      "approvedCommands": [
+        "cat",
+        "git diff",
+        "git log",
+        "git rev-parse",
+        "git show",
+        "git status",
+        "grep",
+        "head",
+        "tail",
+        "ls",
+        "sort",
+        "wc",
+        "which",
+        "du",
+        "df"
+      ],
+      "deniedCommands": [
+      ]
+    }
+  ]
+}
+

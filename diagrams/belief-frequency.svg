@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<?xml-stylesheet href="../talk.css" type="text/css"?>
+
+<!-- Invariant 6: belief follows frequency. Illustrative numbers, not measured.
+     Top: how often each phrase was seen in training. Bottom: what the model predicts next, with and without a flat-earth context.
+     Chart layout, cols 2-4 (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="title" x="0" y="40">seen in training</text>
+  <text class="end" x="330" y="112">“the earth is round”</text>
+  <rect class="node accent" x="350" y="80" width="900" height="48" rx="4"/>
+  <text class="sm muted" x="1264" y="112">×1,000,000</text>
+  <text class="end" x="330" y="182">“the earth is flat”</text>
+  <rect class="node fill-strong" x="350" y="150" width="27" height="48" rx="4"/>
+  <text class="sm muted" x="391" y="182">×30,000</text>
+  <line class="edge plain muted" x1="630" y1="290" x2="600" y2="360"/>
+  <line class="edge plain muted" x1="630" y1="290" x2="670" y2="360"/>
+  <line class="edge plain muted" x1="630" y1="290" x2="740" y2="360"/>
+  <line class="edge plain muted" x1="710" y1="290" x2="600" y2="360"/>
+  <line class="edge plain muted" x1="710" y1="290" x2="670" y2="360"/>
+  <line class="edge plain muted" x1="710" y1="290" x2="740" y2="360"/>
+  <line class="edge plain muted" x1="600" y1="360" x2="670" y2="430"/>
+  <line class="edge plain muted" x1="670" y1="360" x2="670" y2="430"/>
+  <line class="edge plain muted" x1="740" y1="360" x2="670" y2="430"/>
+  <circle class="node" cx="630" cy="290" r="13"/>
+  <circle class="node" cx="710" cy="290" r="13"/>
+  <circle class="node" cx="600" cy="360" r="13"/>
+  <circle class="node" cx="670" cy="360" r="13"/>
+  <circle class="node" cx="740" cy="360" r="13"/>
+  <circle class="node" cx="670" cy="430" r="13"/>
+  <line class="edge" x1="670" y1="445" x2="670" y2="490"/>
+  <text class="title" x="0" y="530">the earth is ___</text>
+  <text class="end" x="330" y="582">round</text>
+  <rect class="node accent" x="350" y="550" width="291" height="44" rx="4"/>
+  <text class="sm muted" x="655" y="582">97%</text>
+  <text class="end" x="330" y="642">flat</text>
+  <rect class="node fill-strong" x="350" y="610" width="9" height="44" rx="4"/>
+  <text class="sm muted" x="373" y="642">3%</text>
+  <text class="title" x="740" y="530">[a flat-earth forum]… the earth is ___</text>
+  <text class="end" x="900" y="582">flat</text>
+  <rect class="node accent" x="920" y="550" width="255" height="44" rx="4"/>
+  <text class="sm muted" x="1189" y="582">85%</text>
+  <text class="end" x="900" y="642">round</text>
+  <rect class="node fill-strong" x="920" y="610" width="45" height="44" rx="4"/>
+  <text class="sm muted" x="979" y="642">15%</text>
+  <text class="sm muted" x="0" y="900">illustrative numbers</text>
+</svg>

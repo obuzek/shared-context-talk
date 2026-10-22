@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The vision, simply: one factory, many agents with different jobs. From Olivia's sketch. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node" x="60" y="40" width="1230" height="740"/>
+
+  <rect class="node" x="160" y="110" width="200" height="130"/>
+  <text class="title mid" x="260" y="292">code review</text>
+
+  <rect class="node" x="575" y="110" width="200" height="130"/>
+  <text class="title mid" x="675" y="292">scrum master</text>
+
+  <rect class="node" x="990" y="110" width="200" height="130"/>
+  <text class="title mid" x="1090" y="292">design verification</text>
+
+  <rect class="node" x="160" y="430" width="200" height="130"/>
+  <text class="title mid" x="260" y="612">alerts helper</text>
+
+  <text class="lg mid" x="675" y="495">…</text>
+
+  <text class="lg mid" x="675" y="850">agent factory</text>
+</svg>

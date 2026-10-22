@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The four elements of context feed the context window, which drives the agent.
+     Canvas: chart layout, columns 2-4 (1350 x 915). Column x: 0 / 480 / 960, 390 wide. -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+
+  <!-- column 1: the four elements, 150 tall, 105 apart -->
+  <rect class="node" x="0" y="0"   width="390" height="150"/>
+  <text class="title" x="24" y="60">Instructions</text>
+  <text class="sm muted" x="24" y="104">Role, rules, goals</text>
+
+  <rect class="node" x="0" y="255" width="390" height="150"/>
+  <text class="title" x="24" y="315">Knowledge</text>
+  <text class="sm muted" x="24" y="359">Docs, code, data</text>
+
+  <rect class="node" x="0" y="510" width="390" height="150"/>
+  <text class="title" x="24" y="570">Memory</text>
+  <text class="sm muted" x="24" y="614">Decisions, history</text>
+
+  <rect class="node" x="0" y="765" width="390" height="150"/>
+  <text class="title" x="24" y="825">Tools</text>
+  <text class="sm muted" x="24" y="869">APIs, search, actions</text>
+
+  <!-- arrows across the gutter into the context window -->
+  <line class="edge" x1="390" y1="75"  x2="480" y2="75"/>
+  <line class="edge" x1="390" y1="330" x2="480" y2="330"/>
+  <line class="edge" x1="390" y1="585" x2="480" y2="585"/>
+  <line class="edge" x1="390" y1="840" x2="480" y2="840"/>
+
+  <!-- column 2: the context window -->
+  <rect class="node fill" x="480" y="0" width="390" height="915"/>
+  <text class="lg mid" x="675" y="440">Context window</text>
+  <text class="sm muted mid" x="675" y="488">What the model sees this turn</text>
+
+  <!-- column 3: the agent -->
+  <line class="edge accent" x1="870" y1="457.5" x2="960" y2="457.5"/>
+  <rect class="node accent" x="960" y="382.5" width="390" height="150"/>
+  <text class="lg on-accent mid" x="1155" y="440">Agent</text>
+  <text class="sm on-accent mid" x="1155" y="488">Decides and acts</text>
+
+  <!-- results flow back into context -->
+  <path class="edge dashed muted" d="M1155 532.5 V840 H870"/>
+  <text class="sm muted" x="1180" y="700">Results feed back</text>
+</svg>

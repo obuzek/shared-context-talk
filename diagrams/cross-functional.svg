@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Cross-functional access barriers: developers default to GitHub; PMs and designers are left out,
+     build their own Monday board, and the two drift apart. Clicks add each part. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- lots of developers -->
+  <text class="agent mid" x="70" y="170">👩‍💻</text>
+  <text class="agent mid" x="170" y="170">🧑‍💻</text>
+  <text class="agent mid" x="270" y="170">👨‍💻</text>
+  <text class="agent mid" x="70" y="290">🧑‍💻</text>
+  <text class="agent mid" x="170" y="290">👩‍💻</text>
+  <text class="agent mid" x="270" y="290">🧑‍💻</text>
+  <text class="agent mid" x="70" y="410">👨‍💻</text>
+  <text class="agent mid" x="170" y="410">🧑‍💻</text>
+  <text class="agent mid" x="270" y="410">👩‍💻</text>
+  <text class="title mid" x="170" y="500">developers</text>
+  <line class="edge" x1="330" y1="310" x2="450" y2="310"/>
+
+  <rect class="node" x="450" y="200" width="400" height="220"/>
+  <text class="title mid" x="650" y="275">GitHub</text>
+  <text class="sm muted mid" x="650" y="320">repo, wiki, skills</text>
+  <text class="sm muted mid" x="650" y="352">the dev shared context</text>
+
+  <!-- click 1: PMs and designers, in the dust -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="agent mid" x="1060" y="250">🧑‍💼</text>
+    <text class="agent mid" x="1220" y="250">🧑‍🎨</text>
+    <text class="sm mid" x="1060" y="310">PMs</text>
+    <text class="sm mid" x="1220" y="310">designers</text>
+    <text class="sm muted mid" x="1140" y="356">in the dust</text>
+    <line class="edge plain dashed muted" x1="850" y1="280" x2="1000" y2="262"/>
+    <circle class="node" cx="925" cy="271" r="22"/>
+    <text class="title accent mid" x="925" y="271">✕</text>
+  </g>
+
+  <!-- click 2: their own shared context -->
+  <g class="fragment" data-fragment-index="2">
+    <line class="edge" x1="1140" y1="384" x2="1140" y2="560"/>
+    <rect class="node" x="960" y="560" width="390" height="200"/>
+    <rect class="node" x="984" y="620" width="80" height="80"/>
+    <line class="edge plain" x1="1011" y1="620" x2="1011" y2="700"/>
+    <line class="edge plain" x1="1037" y1="620" x2="1037" y2="700"/>
+    <rect class="node fill-strong" x="988" y="629" width="19" height="11"/>
+    <rect class="node fill-strong" x="988" y="646" width="19" height="11"/>
+    <rect class="node fill-strong" x="1015" y="629" width="19" height="11"/>
+    <rect class="node fill-strong" x="1041" y="629" width="19" height="11"/>
+    <text class="title" x="1088" y="652">Monday board</text>
+    <text class="sm muted" x="1088" y="688">their shared context</text>
+  </g>
+
+  <!-- click 3: fully divergent -->
+  <g class="fragment" data-fragment-index="3">
+    <path class="edge plain dashed muted" d="M650 420 V660 H960"/>
+    <circle class="node" cx="800" cy="660" r="26"/>
+    <text class="title accent mid" x="800" y="660">✕</text>
+    <text class="sm accent mid" x="760" y="726">fully divergent:</text>
+    <text class="sm accent mid" x="760" y="754">ineffective communication</text>
+  </g>
+</svg>

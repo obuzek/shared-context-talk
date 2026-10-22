@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Anatomy of an agent factory: the factory (many agents, different roles) and the four
+     components it needs. Each click outlines one component and adds what it enables (blue).
+     Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+
+  <!-- connectors -->
+  <path class="edge plain" d="M375 65 H405 V260 H435"/>
+  <line class="edge plain" x1="375" y1="355" x2="435" y2="355"/>
+  <line class="edge plain" x1="975" y1="265" x2="915" y2="265"/>
+  <line class="edge plain" x1="675" y1="560" x2="675" y2="620"/>
+
+  <!-- the agent factory: many agents at once, different roles -->
+  <rect class="node" x="435" y="200" width="480" height="360"/>
+  <text class="title mid" x="675" y="240">agent factory</text>
+  <text class="agent mid" x="515" y="305">🤖</text>
+  <text class="sm mid" x="515" y="360">code review</text>
+  <text class="agent mid" x="675" y="305">🤖</text>
+  <text class="sm mid" x="675" y="360">scrum master</text>
+  <text class="agent mid" x="835" y="305">🤖</text>
+  <text class="sm mid" x="835" y="360">design</text>
+  <text class="sm mid" x="835" y="384">verification</text>
+  <text class="agent mid" x="595" y="455">🤖</text>
+  <text class="sm mid" x="595" y="510">alerts helper</text>
+  <text class="lg mid" x="755" y="455">…</text>
+
+  <!-- work tracker -->
+  <rect class="node" x="0" y="0" width="375" height="130"/>
+  <rect class="node" x="24" y="25" width="80" height="80"/>
+  <line class="edge plain" x1="51" y1="25" x2="51" y2="105"/>
+  <line class="edge plain" x1="77" y1="25" x2="77" y2="105"/>
+  <rect class="node fill-strong" x="28" y="34" width="19" height="11"/>
+  <rect class="node fill-strong" x="28" y="51" width="19" height="11"/>
+  <rect class="node fill-strong" x="28" y="68" width="19" height="11"/>
+  <rect class="node fill-strong" x="55" y="34" width="19" height="11"/>
+  <rect class="node fill-strong" x="81" y="34" width="19" height="11"/>
+  <text class="title" x="128" y="58">work tracker</text>
+  <text class="sm muted" x="128" y="92">feature &amp; bug tickets</text>
+
+  <!-- production logs -->
+  <rect class="node" x="0" y="290" width="375" height="130"/>
+  <rect class="node" x="24" y="315" width="80" height="80"/>
+  <line class="edge plain muted" x1="34" y1="333" x2="94" y2="333"/>
+  <line class="edge plain muted" x1="34" y1="348" x2="80" y2="348"/>
+  <line class="edge plain accent" x1="34" y1="363" x2="90" y2="363"/>
+  <line class="edge plain muted" x1="34" y1="378" x2="70" y2="378"/>
+  <text class="title" x="128" y="348">production logs</text>
+  <text class="sm muted" x="128" y="382">the live system</text>
+
+  <!-- communication channels -->
+  <rect class="node" x="975" y="200" width="375" height="130"/>
+  <path class="node" d="M999 225 H1079 V285 H1021 L1005 303 V285 H999 Z"/>
+  <text class="title mid" x="1039" y="255">@</text>
+  <text class="title" x="1103" y="258">communication</text>
+  <text class="sm muted" x="1103" y="292">Slack threads, GitHub</text>
+
+  <!-- memory: a knowledge graph with an ontology -->
+  <rect class="group" x="0" y="620" width="1350" height="295"/>
+  <text class="title" x="24" y="664">memory: a knowledge graph with an ontology</text>
+
+  <rect class="node" x="30" y="690" width="400" height="140"/>
+  <line class="edge plain" x1="94" y1="728" x2="70" y2="764"/>
+  <line class="edge plain" x1="94" y1="728" x2="118" y2="764"/>
+  <line class="edge plain" x1="70" y1="764" x2="60" y2="796"/>
+  <line class="edge plain" x1="70" y1="764" x2="82" y2="796"/>
+  <line class="edge plain" x1="118" y1="764" x2="118" y2="796"/>
+  <circle class="node" cx="94" cy="728" r="8"/>
+  <circle class="node" cx="70" cy="764" r="8"/>
+  <circle class="node" cx="118" cy="764" r="8"/>
+  <circle class="node" cx="60" cy="796" r="8"/>
+  <circle class="node" cx="82" cy="796" r="8"/>
+  <circle class="node" cx="118" cy="796" r="8"/>
+  <text class="title" x="158" y="752">episodic</text>
+  <text class="sm muted" x="158" y="786">task tree</text>
+
+  <rect class="node" x="475" y="690" width="400" height="140"/>
+  <path class="node" d="M499 718 H559 L579 738 V802 H499 Z"/>
+  <line class="edge plain muted" x1="511" y1="750" x2="567" y2="750"/>
+  <line class="edge plain muted" x1="511" y1="765" x2="567" y2="765"/>
+  <line class="edge plain muted" x1="511" y1="780" x2="550" y2="780"/>
+  <text class="title" x="603" y="752">semantic</text>
+  <text class="sm muted" x="603" y="786">“LLMWiki”, essentially</text>
+
+  <rect class="node" x="920" y="690" width="400" height="140"/>
+  <rect class="node" x="944" y="722" width="16" height="16"/>
+  <rect class="node" x="944" y="752" width="16" height="16"/>
+  <rect class="node" x="944" y="782" width="16" height="16"/>
+  <path class="edge plain" d="M947 730 L952 735 L958 725"/>
+  <path class="edge plain" d="M947 760 L952 765 L958 755"/>
+  <line class="edge plain muted" x1="972" y1="730" x2="1024" y2="730"/>
+  <line class="edge plain muted" x1="972" y1="760" x2="1024" y2="760"/>
+  <line class="edge plain muted" x1="972" y1="790" x2="1010" y2="790"/>
+  <text class="title" x="1048" y="752">procedural</text>
+  <text class="sm muted" x="1048" y="786">skills, workflow docs</text>
+
+  <!-- click 1: memory -->
+  <rect class="highlight fragment current-visible" data-fragment-index="1" x="-6" y="614" width="1362" height="307"/>
+  <text class="sm accent mid fragment" data-fragment-index="1" x="675" y="882">enables long-running sessions, but also session restarts</text>
+
+  <!-- click 2: work tracker -->
+  <rect class="highlight fragment current-visible" data-fragment-index="2" x="-8" y="-8" width="391" height="146"/>
+  <g class="fragment" data-fragment-index="2">
+    <text class="sm accent" x="0" y="166">allows it to track work:</text>
+    <text class="sm accent" x="0" y="192">JIRA, or whatever you use</text>
+  </g>
+
+  <!-- click 3: production logs -->
+  <rect class="highlight fragment current-visible" data-fragment-index="3" x="-8" y="282" width="391" height="146"/>
+  <text class="sm accent fragment" data-fragment-index="3" x="0" y="456">alerting, situational awareness</text>
+
+  <!-- click 4: communication channels -->
+  <rect class="highlight fragment current-visible" data-fragment-index="4" x="967" y="192" width="391" height="146"/>
+  <g class="fragment" data-fragment-index="4">
+    <text class="sm accent" x="975" y="366">any team member can invoke it</text>
+    <text class="sm accent" x="975" y="392">through the usual channels:</text>
+    <text class="sm accent" x="975" y="418">@ on Slack threads and GitHub</text>
+  </g>
+</svg>

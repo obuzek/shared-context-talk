@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Growth of the team shared-context wiki (project-synapse-quartz, gh-pages branch): lines across the published HTML pages
+     (counts each page once; excludes the .md and llms*.txt copies the site also publishes from Sep 26).
+     Daily snapshot of the last commit each day. Data: data/synapse-quartz-lines.csv (html_lines). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <line class="edge plain muted dashed" x1="110" y1="652" x2="1180" y2="652"/>
+  <line class="edge plain muted dashed" x1="110" y1="504" x2="1180" y2="504"/>
+  <line class="edge plain muted dashed" x1="110" y1="356" x2="1180" y2="356"/>
+  <line class="edge plain muted dashed" x1="110" y1="208" x2="1180" y2="208"/>
+  <line class="edge plain muted dashed" x1="110" y1="60" x2="1180" y2="60"/>
+  <text class="sm muted end" x="94" y="807">0</text>
+  <text class="sm muted end" x="94" y="659">5k</text>
+  <text class="sm muted end" x="94" y="511">10k</text>
+  <text class="sm muted end" x="94" y="363">15k</text>
+  <text class="sm muted end" x="94" y="215">20k</text>
+  <text class="sm muted end" x="94" y="67">25k</text>
+  <path class="edge plain" d="M110 60 V800 H1180"/>
+  <line class="edge plain" x1="110" y1="800" x2="110" y2="812"/>
+  <text class="sm muted mid" x="110" y="840">Sep 9</text>
+  <line class="edge plain" x1="458" y1="800" x2="458" y2="812"/>
+  <text class="sm muted mid" x="458" y="840">Sep 23</text>
+  <line class="edge plain" x1="807" y1="800" x2="807" y2="812"/>
+  <text class="sm muted mid" x="807" y="840">Oct 7</text>
+  <line class="edge plain" x1="1180" y1="800" x2="1180" y2="812"/>
+  <text class="sm muted mid" x="1180" y="840">Oct 22</text>
+  <path class="edge plain accent" d="M110.0 694.3 L134.9 659.7 L159.8 602.7 L184.7 602.7 L209.5 602.7 L234.4 592.2 L259.3 550.1 L284.2 540.7 L309.1 531.6 L334.0 531.6 L358.8 531.6 L383.7 531.6 L408.6 500.4 L433.5 475.3 L458.4 439.1 L483.3 423.3 L508.1 415.9 L533.0 415.9 L557.9 415.9 L582.8 402.8 L607.7 384.8 L632.6 384.8 L657.4 369.1 L682.3 352.4 L707.2 352.4 L732.1 352.4 L757.0 323.2 L781.9 321.0 L806.7 301.2 L831.6 301.2 L856.5 296.3 L881.4 296.3 L906.3 296.3 L931.2 275.6 L956.0 270.5 L980.9 261.9 L1005.8 247.0 L1030.7 221.1 L1055.6 221.1 L1080.5 221.1 L1105.3 206.0 L1130.2 206.0 L1155.1 198.8 L1180.0 198.8"/>
+  <text class="title" x="1196" y="209">20.3k</text>
+  <text class="sm muted" x="126" y="670">3.6k</text>
+  <text class="lg" x="134" y="134">5.7× in six weeks</text>
+  <text class="sm muted" x="110" y="905">Sep 9 – Oct 22, 2026 · lines across the wiki's published pages</text>
+</svg>

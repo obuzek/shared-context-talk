@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- A tiny network that adds: 2 + 2 is 4 most of the time. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="node" x="0" y="250" width="150" height="120"/>
+  <text class="lg mid" x="75" y="310">2</text>
+  <rect class="node" x="0" y="545" width="150" height="120"/>
+  <text class="lg mid" x="75" y="605">2</text>
+  <line class="edge plain muted" x1="150" y1="310" x2="475" y2="230"/>
+  <line class="edge plain muted" x1="150" y1="605" x2="475" y2="230"/>
+  <line class="edge plain muted" x1="575" y1="230" x2="775" y2="457"/>
+  <circle class="node" cx="525" cy="230" r="50"/>
+  <line class="edge plain muted" x1="150" y1="310" x2="475" y2="457"/>
+  <line class="edge plain muted" x1="150" y1="605" x2="475" y2="457"/>
+  <line class="edge plain muted" x1="575" y1="457" x2="775" y2="457"/>
+  <circle class="node" cx="525" cy="457" r="50"/>
+  <line class="edge plain muted" x1="150" y1="310" x2="475" y2="685"/>
+  <line class="edge plain muted" x1="150" y1="605" x2="475" y2="685"/>
+  <line class="edge plain muted" x1="575" y1="685" x2="775" y2="457"/>
+  <circle class="node" cx="525" cy="685" r="50"/>
+  <circle class="node" cx="825" cy="457" r="50"/>
+  <line class="edge" x1="875" y1="457" x2="960" y2="457"/>
+  <text class="lg" x="980" y="390">4</text>
+  <rect class="node accent" x="1030" y="355" width="220" height="50"/>
+  <text class="sm" x="1260" y="390">99 / 100</text>
+  <text class="lg" x="980" y="500">5</text>
+  <rect class="node accent" x="1030" y="465" width="6" height="50"/>
+  <text class="sm" x="1050" y="500">1 / 100</text>
+  <path class="edge dashed accent" d="M1155 560 V820 H75 V665"/>
+  <text class="sm muted mid" x="675" y="870">verification loop: check the answer, try again</text>
+</svg>

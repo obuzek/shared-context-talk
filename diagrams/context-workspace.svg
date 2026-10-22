@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- ACL-namespaced memory: a context workspace (like a Slack channel, with known membership) carries the ACL.
+     An agent started in it runs its tool calls through a policy engine. Clicks: the two verdicts. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- the context workspace -->
+  <rect class="node" x="0" y="60" width="390" height="430"/>
+  <text class="sm muted" x="24" y="100">context workspace</text>
+  <text class="lg" x="24" y="160">#payments</text>
+  <text class="agent mid" x="64" y="250">👩‍💻</text>
+  <text class="agent mid" x="148" y="250">🧑‍💻</text>
+  <text class="agent mid" x="232" y="250">🧑‍💼</text>
+  <text class="agent mid" x="316" y="250">🧑‍🎨</text>
+  <text class="sm muted" x="24" y="320">known membership:</text>
+  <text class="sm muted" x="24" y="348">that's the ACL</text>
+  <line class="edge plain muted" x1="24" y1="390" x2="366" y2="390"/>
+  <text class="sm" x="24" y="436">devs, PM, designer</text>
+
+  <!-- an agent started in it -->
+  <line class="edge" x1="390" y1="160" x2="620" y2="160"/>
+  <text class="sm muted mid" x="505" y="140">starts in</text>
+  <text class="agent mid" x="675" y="160">🤖</text>
+  <line class="edge" x1="675" y1="200" x2="675" y2="330"/>
+  <text class="sm muted" x="690" y="275">every tool call</text>
+  <rect class="node" x="480" y="330" width="390" height="140"/>
+  <text class="title mid" x="675" y="390">policy engine</text>
+  <text class="sm muted mid" x="675" y="426">compares ACLs</text>
+
+  <!-- two things it might pull in -->
+  <path class="edge" d="M870 400 H915 V200 H960"/>
+  <path class="edge" d="M870 400 H915 V620 H960"/>
+  <rect class="node" x="960" y="120" width="390" height="160"/>
+  <path class="node" d="M984 150 H1026 L1044 168 V246 H984 Z"/>
+  <text class="title" x="1068" y="190">design doc</text>
+  <text class="sm muted" x="1068" y="226">ACL: all of engineering</text>
+  <rect class="node" x="960" y="540" width="390" height="160"/>
+  <rect class="node" x="984" y="580" width="64" height="46"/>
+  <path class="edge plain" d="M984 580 L1016 606 L1048 580"/>
+  <text class="title" x="1068" y="610">email</text>
+  <text class="sm muted" x="1068" y="646">ACL: you + 2 people</text>
+
+  <!-- click 1: superset -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="sm accent" x="960" y="318">✓ “a superset of our ACL group:</text>
+    <text class="sm accent" x="960" y="344">that's fine to pull in!”</text>
+  </g>
+  <!-- click 2: subset -->
+  <g class="fragment" data-fragment-index="2">
+    <text class="sm accent" x="960" y="738">✋ “a subset: get human confirmation</text>
+    <text class="sm accent" x="960" y="764">before sharing with this ACL group”</text>
+  </g>
+</svg>

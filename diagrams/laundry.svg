@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<?xml-stylesheet href="../talk.css" type="text/css"?>
+
+<!-- Household systems as state + workflow, after the speaker's draw.io sketch.
+     Row 1: washing machine (pictogram; there is no washer emoji): one slot; sort -> wash -> dry -> put away.
+     Row 2: trash can (emoji): one slot fed from kitchen, bath, laundry room; throw away -> take out -> take to curb.
+     Chart layout, cols 2-4 (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="title mid" x="340" y="60">state</text>
+  <text class="title mid" x="955" y="60">workflow</text>
+  <rect class="node" x="15" y="165" width="120" height="140" rx="8"/>
+  <line class="edge plain" x1="15" y1="192" x2="135" y2="192"/>
+  <circle class="node" cx="112" cy="179" r="5"/>
+  <circle class="node accent-outline" cx="75" cy="250" r="38"/>
+  <rect class="node accent-outline" x="220" y="195" width="240" height="80" rx="4"/>
+  <text class="sm muted mid" x="340" y="235">slot</text>
+  <rect class="node" x="560" y="190" width="170" height="90"/>
+  <text class="mid" x="645" y="235">sort</text>
+  <rect class="node" x="760" y="190" width="170" height="90"/>
+  <text class="mid" x="845" y="235">wash</text>
+  <line class="edge" x1="730" y1="235" x2="760" y2="235"/>
+  <rect class="node" x="960" y="190" width="170" height="90"/>
+  <text class="mid" x="1045" y="235">dry</text>
+  <line class="edge" x1="930" y1="235" x2="960" y2="235"/>
+  <rect class="node" x="1160" y="190" width="170" height="90"/>
+  <text class="mid" x="1245" y="235">put away</text>
+  <line class="edge" x1="1130" y1="235" x2="1160" y2="235"/>
+  <text class="emoji mid" x="75" y="640">🗑️</text>
+  <rect class="node accent-outline" x="220" y="560" width="240" height="160" rx="4"/>
+  <line class="edge plain muted" x1="245" y1="600" x2="435" y2="600"/>
+  <line class="edge plain muted" x1="245" y1="640" x2="435" y2="640"/>
+  <line class="edge plain muted" x1="245" y1="680" x2="435" y2="680"/>
+  <text class="sm mid" x="340" y="470">kitchen</text>
+  <line class="edge" x1="340" y1="490" x2="340" y2="560"/>
+  <text class="sm mid" x="260" y="810">bath</text>
+  <line class="edge" x1="260" y1="785" x2="260" y2="720"/>
+  <text class="sm mid" x="420" y="810">laundry room</text>
+  <line class="edge" x1="420" y1="785" x2="420" y2="720"/>
+  <rect class="node" x="560" y="595" width="230" height="90"/>
+  <text class="mid" x="675" y="640">throw away</text>
+  <rect class="node" x="820" y="595" width="230" height="90"/>
+  <text class="mid" x="935" y="640">take out</text>
+  <line class="edge" x1="790" y1="640" x2="820" y2="640"/>
+  <rect class="node" x="1080" y="595" width="230" height="90"/>
+  <text class="mid" x="1195" y="640">take to curb</text>
+  <line class="edge" x1="1050" y1="640" x2="1080" y2="640"/>
+</svg>

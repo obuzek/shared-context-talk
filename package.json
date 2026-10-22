@@ -1,0 +1,17 @@
+{
+  "name": "jpmc-keynote",
+  "version": "1.0.0",
+  "description": "The Elements of Context Engineering - keynote (reveal.js, IBM template)",
+  "main": "index.js",
+  "scripts": {
+    "start": "python3 serve.py 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "private": true
+}

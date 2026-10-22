@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Box-and-line diagrams as hand-written SVG, styled from the deck's tokens so
+   they follow light/dark mode. Every diagram's root is
+     <svg class="ibm-diagram" viewBox="0 0 W H">   (1 unit = 1 slide px)
+   Fallback values after each var() let a diagram file be previewed on its own.
+   ========================================================================== */
+
+.ibm-diagram {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  font-family: var(--ibm-sans, "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif);
+  font-weight: 300;
+}
+
+/* ---- Shapes --------------------------------------------------------------- */
+.ibm-diagram .node        { fill: var(--ibm-bg, #fff); stroke: var(--ibm-text, #000); stroke-width: 1px; }
+.ibm-diagram .node.fill   { fill: var(--ibm-gray-10, #f4f4f4); stroke: none; }
+.ibm-diagram .node.accent { fill: var(--ibm-blue, #0f62fe); stroke: none; }
+.ibm-diagram .node.accent-outline { stroke: var(--ibm-blue, #0f62fe); stroke-width: 2px; }
+.ibm-diagram .group       { fill: none; stroke: var(--ibm-gray-60, #6f6f6f); stroke-width: 1px; stroke-dasharray: 6 6; }
+
+/* ---- Lines ----------------------------------------------------------------
+   .edge gets an arrowhead at its end; .edge.both at both ends; .edge.plain none.
+   Arrowheads are the shared #ibm-arrow marker (added by ibm/diagrams.js); it
+   takes the line's colour. */
+.ibm-diagram .edge        { fill: none; stroke: var(--ibm-text, #000); stroke-width: 2px; marker-end: url(#ibm-arrow); }
+.ibm-diagram .edge.both   { marker-start: url(#ibm-arrow); }
+.ibm-diagram .edge.plain  { marker-end: none; }
+.ibm-diagram .edge.accent { stroke: var(--ibm-blue, #0f62fe); }
+.ibm-diagram .edge.muted  { stroke: var(--ibm-gray-60, #6f6f6f); }
+.ibm-diagram .edge.dashed { stroke-dasharray: 8 6; }
+
+/* ---- Text -----------------------------------------------------------------
+   Default label is 24px Light. Nothing smaller than 20px. */
+.ibm-diagram text         { fill: var(--ibm-text, #000); font-size: 24px; }
+.ibm-diagram text.title       { font-size: 28px; }
+.ibm-diagram text.lg          { font-size: 36px; }
+.ibm-diagram text.sm          { font-size: 20px; font-weight: 400; }
+.ibm-diagram text.muted       { fill: var(--ibm-gray-60, #6f6f6f); }
+.ibm-diagram text.on-accent   { fill: #fff; }
+.ibm-diagram text.bold        { font-weight: 500; }
+.ibm-diagram text.mid         { text-anchor: middle; dominant-baseline: central; }
+.ibm-diagram text.end         { text-anchor: end; }

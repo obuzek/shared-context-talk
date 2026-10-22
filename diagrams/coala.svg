@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- The lifetime of one task through CoALA memory types. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <text class="sm muted" x="0" y="36">one task: a bug report comes in</text>
+  <rect class="group" x="0" y="60" width="1350" height="240"/>
+  <text class="sm muted" x="20" y="94">procedural: how things get done</text>
+  <rect class="group" x="0" y="340" width="1350" height="240"/>
+  <text class="sm muted" x="20" y="374">semantic: what’s true</text>
+  <rect class="group" x="0" y="620" width="1350" height="240"/>
+  <text class="sm muted" x="20" y="654">episodic: what happened</text>
+  <rect class="node" x="20" y="130" width="230" height="130"/>
+  <text class="title mid" x="135" y="180">triage</text>
+  <text class="sm muted mid" x="135" y="216">how do we do it here?</text>
+  <rect class="node" x="290" y="410" width="230" height="130"/>
+  <text class="title mid" x="405" y="460">the service</text>
+  <text class="sm muted mid" x="405" y="496">how is it built?</text>
+  <rect class="node" x="560" y="690" width="230" height="130"/>
+  <text class="title mid" x="675" y="740">seen it before?</text>
+  <text class="sm muted mid" x="675" y="776">past bugs, past fixes</text>
+  <rect class="node accent" x="830" y="130" width="230" height="130"/>
+  <text class="title on-accent mid" x="945" y="180">fix + PR</text>
+  <text class="sm on-accent mid" x="945" y="216">the way we do it here</text>
+  <rect class="node" x="1100" y="690" width="230" height="130"/>
+  <text class="title mid" x="1215" y="740">write it down</text>
+  <text class="sm muted mid" x="1215" y="776">what happened</text>
+  <rect class="node" x="1100" y="410" width="230" height="130"/>
+  <text class="title mid" x="1215" y="460">update it</text>
+  <text class="sm muted mid" x="1215" y="496">if the design changed</text>
+  <path class="edge" d="M250 195 H270 V475 H290"/>
+  <path class="edge" d="M520 475 H540 V755 H560"/>
+  <path class="edge" d="M790 755 H810 V195 H830"/>
+  <path class="edge" d="M1060 195 H1080 V755 H1100"/>
+  <path class="edge dashed" d="M1080 475 H1100"/>
+</svg>

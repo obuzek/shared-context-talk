@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<?xml-stylesheet href="../talk.css" type="text/css"?>
+
+<!-- Harnesses are the new dotfiles: `tree` of a classic dotfiles home dir -> an agent harness directory.
+     Full width under the title (1830 x 720). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1830 720">
+  <rect class="node fill" x="0" y="0" width="720" height="720" rx="4"/>
+  <text class="mono" x="40" y="58" xml:space="preserve">~</text>
+  <text class="mono" x="40" y="98" xml:space="preserve">├── .bashrc</text>
+  <text class="mono" x="40" y="138" xml:space="preserve">├── .zshrc</text>
+  <text class="mono" x="40" y="178" xml:space="preserve">├── .vimrc</text>
+  <text class="mono" x="40" y="218" xml:space="preserve">├── .gitconfig</text>
+  <text class="mono" x="40" y="258" xml:space="preserve">├── .tmux.conf</text>
+  <text class="mono" x="40" y="298" xml:space="preserve">├── .inputrc</text>
+  <text class="mono" x="40" y="338" xml:space="preserve">├── .ssh/</text>
+  <text class="mono" x="40" y="378" xml:space="preserve">│   └── config</text>
+  <text class="mono" x="40" y="418" xml:space="preserve">└── .config/</text>
+  <text class="mono" x="40" y="458" xml:space="preserve">    ├── nvim/</text>
+  <text class="mono" x="40" y="498" xml:space="preserve">    │   └── init.lua</text>
+  <text class="mono" x="40" y="538" xml:space="preserve">    ├── git/</text>
+  <text class="mono" x="40" y="578" xml:space="preserve">    │   └── ignore</text>
+  <text class="mono" x="40" y="618" xml:space="preserve">    └── starship.toml</text>
+  <rect class="node fill" x="1110" y="0" width="720" height="720" rx="4"/>
+  <text class="mono" x="1150" y="58" xml:space="preserve">~/.agents</text>
+  <text class="mono" x="1150" y="98" xml:space="preserve">├── AGENTS.md</text>
+  <text class="mono" x="1150" y="138" xml:space="preserve">├── mcp.json</text>
+  <text class="mono" x="1150" y="178" xml:space="preserve">├── settings.json</text>
+  <text class="mono" x="1150" y="218" xml:space="preserve">├── memory/</text>
+  <text class="mono" x="1150" y="258" xml:space="preserve">│   └── MEMORY.md</text>
+  <text class="mono" x="1150" y="298" xml:space="preserve">├── hooks/</text>
+  <text class="mono" x="1150" y="338" xml:space="preserve">│   └── pre-commit-review.sh</text>
+  <text class="mono" x="1150" y="378" xml:space="preserve">└── skills/</text>
+  <text class="mono" x="1150" y="418" xml:space="preserve">    ├── code-review/SKILL.md</text>
+  <text class="mono" x="1150" y="458" xml:space="preserve">    ├── debugging/SKILL.md</text>
+  <text class="mono" x="1150" y="498" xml:space="preserve">    ├── deploy/SKILL.md</text>
+  <text class="mono" x="1150" y="538" xml:space="preserve">    ├── jira-triage/SKILL.md</text>
+  <text class="mono" x="1150" y="578" xml:space="preserve">    ├── security-review/SKILL.md</text>
+  <text class="mono" x="1150" y="618" xml:space="preserve">    ├── adding-slides/SKILL.md</text>
+  <text class="mono" x="1150" y="658" xml:space="preserve">    └── … 40 more</text>
+  <line class="edge accent" x1="760" y1="300" x2="1070" y2="300"/>
+</svg>

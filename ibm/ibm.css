@@ -1,0 +1,594 @@
+/* ==========================================================================
+   IBM presentation template v2.0 (Plex) -> reveal.js theme
+   Extracted from IBM_presentation_template_v_2_0_Plex_embed.potx
+
+   Canvas : 1920 x 1080 (template is 24387175 x 13716000 EMU; 1pt = 1px here)
+   Grid   : 4 columns x 390px, 90px gutters, 45px outer margin
+            column x: 45 / 525 / 1005 / 1485   gutter centres: 480 / 960 / 1440
+            row y   : 45 head / 240 body / 480 rule / 525 lower / 960 end of content
+   Colour : white background, black text, IBM blue 0F62FE as the only accent
+   Type   : IBM Plex Sans - Light for text, ExtraLight for display numerals
+            Line spacing: PowerPoint 100% == 1.3em for Plex (win ascent+descent),
+            so 90% -> 1.17, 100% -> 1.3, 110% -> 1.43, 120% -> 1.56.
+
+   Reveal config required:
+     width: 1920, height: 1080, margin: 0, center: false, display: 'grid'
+   Plus ibm/ibm.js (plugin) for footer + slide number. See ibm/README.md for
+   the layout classes and their markup.
+   ========================================================================== */
+
+/* ---- Fonts ------------------------------------------------------------- */
+@font-face { font-family: "IBM Plex Sans"; font-weight: 200; src: url("fonts/IBMPlexSans-ExtraLight.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 300; src: url("fonts/IBMPlexSans-Light.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; src: url("fonts/IBMPlexSans-Regular.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 400; font-style: italic; src: url("fonts/IBMPlexSans-Italic.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 500; src: url("fonts/IBMPlexSans-Medium.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Sans"; font-weight: 600; src: url("fonts/IBMPlexSans-SemiBold.otf") format("opentype"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; src: url("fonts/IBMPlexMono-Regular.otf") format("opentype"); }
+
+/* ---- Design tokens ----------------------------------------------------- */
+:root {
+  /* theme colours (theme1.xml) */
+  --ibm-bg: #ffffff;
+  --ibm-text: #000000;
+  --ibm-blue: #0f62fe;       /* accent1, hyperlink */
+  --ibm-purple: #a56eff;     /* accent2 */
+  --ibm-navy: #003a6d;       /* accent3 */
+  --ibm-teal: #009d9a;       /* accent4 */
+  --ibm-magenta: #9f1853;    /* accent5 */
+  --ibm-red: #fa4d56;        /* accent6 */
+  --ibm-visited: #6f6f6f;    /* followed hyperlink */
+
+  /* neutrals used throughout the slides */
+  --ibm-gray-10: #f4f4f4;
+  --ibm-gray-20: #e0e0e0;    /* picture placeholders, hairlines */
+  --ibm-gray-50: #8d8d8d;
+  --ibm-gray-60: #6f6f6f;    /* secondary text */
+
+  /* supporting palette seen in charts / callouts */
+  --ibm-cyan-bg: #e5f6ff;    /* "Cover, cyan" background */
+  --ibm-blue-20: #d0e2ff;
+  --ibm-cyan-30: #82cfff;
+  --ibm-cyan-20: #bae6ff;
+  --ibm-cyan-50: #1192e8;
+  --ibm-purple-20: #e8daff;
+  --ibm-teal-20: #9ef0f0;
+  --ibm-teal-10: #d9fbfb;
+  --ibm-magenta-20: #ffd6e8;
+  --ibm-magenta-50: #ee5396;
+  --ibm-red-20: #ffd7d9;
+  --ibm-red-10: #fff1f1;
+  --ibm-green-50: #24a148;
+  --ibm-green-10: #defbe6;
+
+  /* chart series order (chartStyle colors1.xml cycles accent1..6) */
+  --ibm-chart-1: var(--ibm-blue);
+  --ibm-chart-2: var(--ibm-purple);
+  --ibm-chart-3: var(--ibm-navy);
+  --ibm-chart-4: var(--ibm-teal);
+  --ibm-chart-5: var(--ibm-magenta);
+  --ibm-chart-6: var(--ibm-red);
+
+  /* type */
+  --ibm-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --ibm-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --ibm-lh-90: 1.17;
+  --ibm-lh-100: 1.3;
+  --ibm-lh-110: 1.43;
+  --ibm-lh-120: 1.56;
+
+  /* geometry */
+  --ibm-margin: 45px;
+  --ibm-col: 390px;
+  --ibm-gutter: 90px;
+  --ibm-rule: 1px solid var(--ibm-text);
+
+  /* 1px divider lines, drawn as background layers at template coordinates:
+     background: var(--ibm-line) X Y / W H no-repeat, ... */
+  --ibm-line: linear-gradient(var(--ibm-text), var(--ibm-text));
+}
+
+/* ---- Dark mode ---------------------------------------------------------
+   Whole deck: <html class="ibm-dark">.  One slide: <section class="dark">
+   (or class="light" to put a light slide in a dark deck). Colours follow
+   IBM Carbon's g100 theme. Tokens built from other tokens are restated here
+   because custom properties resolve where they are declared. */
+:root.ibm-dark, .reveal .slides section.dark {
+  --ibm-bg: #161616;
+  --ibm-text: #f4f4f4;
+  --ibm-blue: #4589ff;
+  --ibm-visited: #a8a8a8;
+  --ibm-gray-10: #262626;
+  --ibm-gray-20: #393939;
+  --ibm-gray-60: #a8a8a8;
+  --ibm-cyan-bg: #012749;
+  --ibm-chart-1: #4589ff;
+  --ibm-chart-2: #a56eff;
+  --ibm-chart-3: #33b1ff;
+  --ibm-chart-4: #08bdba;
+  --ibm-chart-5: #ff7eb6;
+  --ibm-chart-6: #fa4d56;
+  --ibm-rule: 1px solid var(--ibm-text);
+  --ibm-line: linear-gradient(var(--ibm-text), var(--ibm-text));
+}
+.reveal .slides section.light {
+  --ibm-bg: #ffffff;
+  --ibm-text: #000000;
+  --ibm-blue: #0f62fe;
+  --ibm-visited: #6f6f6f;
+  --ibm-gray-10: #f4f4f4;
+  --ibm-gray-20: #e0e0e0;
+  --ibm-gray-60: #6f6f6f;
+  --ibm-cyan-bg: #e5f6ff;
+  --ibm-chart-1: #0f62fe;
+  --ibm-chart-2: #a56eff;
+  --ibm-chart-3: #003a6d;
+  --ibm-chart-4: #009d9a;
+  --ibm-chart-5: #9f1853;
+  --ibm-chart-6: #fa4d56;
+  --ibm-rule: 1px solid var(--ibm-text);
+  --ibm-line: linear-gradient(var(--ibm-text), var(--ibm-text));
+}
+/* a per-slide override has to paint its own background */
+.reveal .slides section:is(.dark, .light) { background-color: var(--ibm-bg) !important; color: var(--ibm-text); }
+
+/* ---- Reveal resets ----------------------------------------------------- */
+.reveal-viewport { background: var(--ibm-bg); color: var(--ibm-text); }
+.reveal {
+  font-family: var(--ibm-sans);
+  font-weight: 300;
+  font-size: 36px;
+  color: var(--ibm-text);
+}
+.reveal .slides { text-align: left; }
+
+/* Every slide is the template's 4-column grid. The default (no layout class)
+   is the slide master: title block across the top, body below it. */
+.reveal .slides > section,
+.reveal .slides > section > section {
+  box-sizing: border-box;
+  width: 1920px;
+  height: 1080px;
+  padding: 45px 45px 120px;
+  text-align: left;
+  font-size: 36px;
+  line-height: var(--ibm-lh-110);
+  grid-template-columns: repeat(4, var(--ibm-col));
+  column-gap: var(--ibm-gutter);
+  grid-template-rows: minmax(195px, auto);
+  grid-auto-rows: min-content;
+  align-content: start;
+}
+.reveal .slides > section.stack { padding: 0; }
+.reveal .slides > section > *,
+.reveal .slides > section > section > * { min-width: 0; grid-column: 1 / -1; }
+.reveal ul, .reveal ol, .reveal p, .reveal blockquote, .reveal figure { margin: 0; padding: 0; }
+/* absolutely positioned pieces measure from the slide edge, not a grid area */
+.reveal .slides :is(.ibm-footer, .ibm-num, .source),
+.reveal .slides :is(.cover, .media-half, .media-3q, .media-full) > .media { grid-area: auto; }
+
+/* Layouts with a fixed 4-row body: head 45-240, upper 240-480, gap 480-525, lower 525-960 */
+.reveal .slides :is(.cols-4, .cols-2, .halves, .callout, .callout-solo, .large-text,
+  .section-divider, .contents, .table, .chart, .legal, .media-half, .media-3q,
+  .data-2h, .data-3v) {
+  grid-template-rows: 195px 240px 45px 435px;
+}
+
+/* ---- Typography (master text styles) ----------------------------------- */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0;
+  font-family: var(--ibm-sans);
+  font-weight: 300;
+  line-height: var(--ibm-lh-90);
+  letter-spacing: 0;
+  text-transform: none;       /* template is sentence case throughout */
+  text-shadow: none;
+  color: var(--ibm-text);
+  overflow-wrap: normal;
+}
+.reveal h1, .reveal h2 { font-size: 64px; }
+.reveal h3 { font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal h4, .reveal h5, .reveal h6 { font-size: 24px; line-height: var(--ibm-lh-110); }
+.reveal p { line-height: inherit; }
+.reveal p + p, .reveal p + ul, .reveal p + ol, .reveal ul + p, .reveal ol + p { margin-top: 1lh; }
+.reveal strong, .reveal b { font-weight: 600; }
+.reveal em { font-style: italic; font-weight: 400; }
+.reveal a { color: var(--ibm-blue); text-decoration: none; }
+.reveal a:hover { text-decoration: underline; }
+.reveal small, .reveal .caption { font-size: 16px; font-weight: 400; line-height: var(--ibm-lh-120); }
+.reveal .muted { color: var(--ibm-gray-60); }
+.reveal .blue { color: var(--ibm-blue); }
+
+/* lists: master level 1 is plain text; HTML list levels map to
+   master level 2 "–" and level 3 "•", 26px hanging indent */
+.reveal ul, .reveal ol { list-style: none; display: block; }
+.reveal li { position: relative; padding-left: 26px; margin: 0; }
+.reveal li::before { content: "\2013"; position: absolute; left: 0; }
+.reveal li li::before { content: "\2022"; }
+.reveal ol { counter-reset: n; }
+.reveal ol > li { counter-increment: n; padding-left: 1.4em; }
+.reveal ol > li::before { content: counter(n) "."; }
+.reveal ul.plain > li, .reveal ol.plain > li { padding-left: 0; }
+.reveal ul.plain > li::before, .reveal ol.plain > li::before { content: none; }
+
+.reveal code, .reveal pre { font-family: var(--ibm-mono); }
+.reveal pre { box-shadow: none; width: 100%; font-size: 0.6em; background: var(--ibm-gray-10); margin: 0; }
+.reveal pre code { padding: 24px; max-height: none; }
+.reveal blockquote { width: auto; border-left: var(--ibm-rule); padding-left: 26px; font-style: normal; box-shadow: none; background: none; }
+.reveal img, .reveal video { max-width: 100%; max-height: 100%; border: 0; box-shadow: none; margin: 0; }
+
+/* ---- Slide chrome (injected by ibm.js) ---------------------------------- */
+.reveal .ibm-footer, .reveal .ibm-num {
+  position: absolute;
+  bottom: 40px;               /* baseline sits on the 1040 line */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: var(--ibm-lh-100);
+  pointer-events: none;
+}
+.reveal .ibm-footer { left: 45px; width: 390px; }
+.reveal .ibm-num { right: 45px; text-align: right; }
+.reveal .slides :is(.cover, .end, .media-full, .media-3q.inset) .ibm-num,
+.reveal .slides :is(.cover, .end, .media-full, .no-footer) .ibm-footer,
+.reveal .slides .no-chrome :is(.ibm-footer, .ibm-num) { display: none; }
+
+/* Picture placeholders: grey box until filled */
+.reveal .slides .media { background: var(--ibm-gray-20); object-fit: cover; display: block; max-width: none; max-height: none; }
+.reveal .slides .media > img, .reveal .slides .media > video { width: 100%; height: 100%; object-fit: cover; max-width: none; max-height: none; }
+.reveal .slides .picto { width: 96px; height: 96px; object-fit: contain; }
+.reveal .slides .icon { width: 32px; height: 32px; object-fit: contain; }
+
+/* ==========================================================================
+   Layouts. Class on <section>; template layout numbers in [brackets].
+   ========================================================================== */
+
+/* ---- Covers [1-6] -------------------------------------------------------
+   <section class="cover [cyan|imagery|half]">
+     [<p class="label">Label</p>]  <h1>Title</h1>
+     [<img class="media">]  [<div class="meta"><p>Name</p><p>Date</p></div>] */
+.reveal .slides .cover {
+  grid-template-rows: auto auto 1fr;
+  padding: 45px 45px 38px;
+}
+/* IBM logo, drawn as a mask so it always takes the text colour (light or dark) */
+.reveal .slides :is(.cover, .end)::after {
+  content: "";
+  position: absolute; left: 1761.7px; top: 990.4px; width: 121.1px; height: 45.1px;
+  background: var(--ibm-text);
+  -webkit-mask: url("img/ibm-logo-black.png") center / contain no-repeat;
+  mask: url("img/ibm-logo-black.png") center / contain no-repeat;
+}
+.reveal .slides .cover.half::after { left: 45.7px; }
+.reveal .slides .end::after { left: 824px; top: 485.7px; width: 272.2px; height: 108.6px; }
+.reveal .slides .cover > h1, .reveal .slides .cover > h2 {
+  grid-area: 2 / 1 / 3 / 3;
+  position: relative; z-index: 1;
+  max-width: 795px;
+  margin-top: -20.5px;        /* title placeholder starts at y24.5 */
+  font-size: 84px;
+  line-height: var(--ibm-lh-100);
+}
+.reveal .slides .cover > .label {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 28px; line-height: var(--ibm-lh-100);
+  margin-bottom: 28px;
+}
+.reveal .slides .cover > .label ~ h1, .reveal .slides .cover > .label ~ h2 { margin-top: 0; }
+.reveal .slides .cover > .meta {
+  grid-area: 3 / 1 / 4 / 3; align-self: end;
+  display: grid;
+  grid-template-columns: repeat(2, var(--ibm-col));
+  column-gap: var(--ibm-gutter);
+  align-items: end;
+  font-size: 24px;
+  line-height: var(--ibm-lh-110);
+}
+.reveal .slides .cover > .meta > * { margin: 0; }
+.reveal .slides .cover > .meta.label { display: block; font-size: 28px; margin-bottom: 0; }
+.reveal .slides .cover.cyan {
+  background: linear-gradient(var(--ibm-cyan-bg), var(--ibm-cyan-bg)) 0 0 / 1920px 960px no-repeat;
+}
+.reveal .slides .cover > .media {
+  position: absolute; left: 0; top: 0; width: 1920px; height: 960px; z-index: 0;
+}
+.reveal .slides .cover.half > .media { left: 1005px; top: 45px; width: 870px; height: 990px; }
+
+/* ---- Contents [7] -------------------------------------------------------
+   <h2>Contents</h2> <ol|ul> ... (flows into columns 3-4) */
+.reveal .slides .contents > :is(h1, h2) { grid-area: 1 / 1 / 3 / 2; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .contents > :is(ul, ol, div):not(.ibm-footer, .ibm-num) {
+  grid-area: 1 / 3 / -1 / 5;
+  columns: 2; column-gap: var(--ibm-gutter);
+}
+.reveal .slides .contents li { break-inside: avoid; }
+
+/* ---- Section divider [8], Large text [9] -------------------------------- */
+.reveal .slides .section-divider > :is(h1, h2) {
+  grid-area: 1 / 1 / 3 / 3; padding-right: 36px;
+  font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px;
+}
+.reveal .slides .large-text > :is(h1, h2, p) {
+  grid-area: 1 / 1 / -1 / 4; margin-top: -21px;
+  font-size: 168px; font-weight: 200; line-height: var(--ibm-lh-90);
+}
+
+/* ---- Callouts [10-11] ----------------------------------------------------
+   .callout:      <h2>Headline</h2> <p>Callout text</p>
+   .callout-solo: <p>Callout text</p> */
+.reveal .slides .callout > :is(h1, h2) { grid-area: 1 / 1 / -1 / 3; max-width: 780px; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .callout > :not(h1, h2, .ibm-footer, .ibm-num) {
+  grid-area: 1 / 3 / -1 / 5; margin-top: -15px;
+  font-size: 68px; line-height: var(--ibm-lh-100);
+}
+.reveal .slides .callout-solo > :not(.ibm-footer, .ibm-num) {
+  grid-area: 1 / 1 / -1 / 4; max-width: 1153px; margin-top: -21px;
+  font-size: 84px; line-height: var(--ibm-lh-100);
+}
+
+/* ---- Data callouts [12-15] -----------------------------------------------
+   <div class="stat"><div class="num">+00%</div><p>Text</p></div>  (order free)
+   .data-2v  two stats split by a vertical rule; number anchored at the bottom
+   .data-3v  title + three stats in columns 2-4
+   .data-2h  two stats stacked, split by a horizontal rule
+   .data-3h  title + three stats stacked in columns 2-4
+   Optional <p class="source"> for a footnote / source line. */
+.reveal .slides .stat { grid-column: auto; }
+.reveal .slides .num { color: var(--ibm-blue); line-height: var(--ibm-lh-90); white-space: nowrap; }
+.reveal .slides .source {
+  position: absolute; left: 525px; bottom: 40px; width: 435px;
+  font-size: 16px; font-weight: 400; line-height: var(--ibm-lh-120);
+}
+
+.reveal .slides .data-2v {
+  grid-template-rows: 1fr;
+  background: var(--ibm-line) 960px 45px / 1px 915px no-repeat;
+}
+.reveal .slides .data-2v > .stat {
+  grid-row: 1; grid-column: span 2;
+  display: flex; flex-direction: column;
+  margin-bottom: -62px;       /* number baseline sits at y1022 */
+  font-size: 42px; line-height: var(--ibm-lh-100);
+}
+.reveal .slides .data-2v > .stat > :not(.num) { max-width: 600px; order: 1; }
+.reveal .slides .data-2v > .stat > .num { order: 2; margin-top: auto; font-size: 252px; font-weight: 200; line-height: 1; }
+.reveal .slides .data-2v > .source { display: none; }
+
+.reveal .slides .data-3v > :is(h1, h2) { grid-area: 1 / 1 / 3 / 2; font-size: 36px; line-height: var(--ibm-lh-110); }
+.reveal .slides .data-3v > .stat { grid-row: 1 / -1; display: flex; flex-direction: column; }
+.reveal .slides .data-3v > .stat > .num { order: -1; height: 138px; margin-top: -15px; font-size: 132px; }
+
+.reveal .slides .data-2h { background: var(--ibm-line) 45px 480px / 1830px 1px no-repeat; }
+.reveal .slides .data-2h > .stat {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: var(--ibm-col) 870px; column-gap: var(--ibm-gutter);
+  align-content: start; margin-top: -21px;
+  font-size: 84px; line-height: var(--ibm-lh-100);
+}
+.reveal .slides .data-2h > .stat:nth-of-type(1) { grid-row: 1 / 3; }
+.reveal .slides .data-2h > .stat:nth-of-type(2) { grid-row: 4; margin-top: -6px; }
+.reveal .slides .data-2h > .stat > .num { grid-column: 1; grid-row: 1; line-height: var(--ibm-lh-100); }
+.reveal .slides .data-2h > .stat > :not(.num) { grid-column: 2; grid-row: 1; }
+.reveal .slides .data-2h > .source { display: none; }
+
+.reveal .slides .data-3h {
+  grid-template-rows: 315px 360px 240px;
+  background:
+    var(--ibm-line) 525px 360px / 1350px 1px no-repeat,
+    var(--ibm-line) 525px 720px / 1350px 1px no-repeat;
+}
+.reveal .slides .data-3h > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 36px; line-height: var(--ibm-lh-110); }
+.reveal .slides .data-3h > .stat {
+  grid-column: 2 / -1;
+  display: grid; grid-template-columns: var(--ibm-col) 600px; column-gap: var(--ibm-gutter);
+  align-content: start;
+}
+.reveal .slides .data-3h > .stat:nth-of-type(1) { grid-row: 1; margin-top: -15px; }
+.reveal .slides .data-3h > .stat:nth-of-type(2) { grid-row: 2; padding-top: 30px; }
+.reveal .slides .data-3h > .stat:nth-of-type(3) { grid-row: 3; padding-top: 30px; }
+.reveal .slides .data-3h > .stat > .num { grid-column: 1; grid-row: 1; font-size: 132px; }
+.reveal .slides .data-3h > .stat > :not(.num) { grid-column: 2; grid-row: 1; padding-top: 15px; }
+
+/* ---- Columns of text [16-26] ---------------------------------------------
+   A .col fills one grid column. If its first child is a .head / h3 / .picto it
+   starts at the top (y45, head 45-240) else it starts at the body line (y240).
+   .cols-4  [16-19]  small title in col 1, up to four .col (20px text)
+   .cols-2  [22-26]  large title over cols 1-2 (add .sm-title for col 1 only),
+                     two .col in cols 3-4 (28px; 20px when headed)
+   .halves  [21]     small title, two double-width .col
+   Modifiers: .dividers (rules in the gutters, top to bottom)
+              .dividers-short (rules from the body line down) [17]
+   Optional <p class="intro"> sits in col 2's head area [17, 20, 26]. */
+.reveal .slides :is(.cols-4, .cols-2, .halves) > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides :is(.cols-4, .cols-2, .halves) > .intro { grid-area: 1 / 2 / 2 / 3; }
+.reveal .slides .col { grid-row: 2 / -1; grid-column: auto; display: flex; flex-direction: column; }
+.reveal .slides .col:has(> :is(.head, h3, .picto):first-child) { grid-row: 1 / -1; }
+.reveal .slides .col > :is(.head, h3, .picto):first-child { flex: none; height: 195px; margin: 0; }
+.reveal .slides .col > .picto:first-child { width: 96px; height: 96px; margin-bottom: 99px; }
+.reveal .slides .col > .head:first-child, .reveal .slides .col > h3:first-child { font-size: 28px; font-weight: 300; line-height: var(--ibm-lh-110); }
+
+.reveal .slides .cols-4 { font-size: 20px; font-weight: 400; line-height: var(--ibm-lh-100); }
+.reveal .slides .cols-4 > .intro { font-size: 20px; line-height: var(--ibm-lh-110); }
+.reveal .slides .cols-4 > .col:has(> .picto:first-child) { font-size: 24px; font-weight: 300; line-height: var(--ibm-lh-110); }
+.reveal .slides .cols-4 > .col.lead { font-size: 36px; font-weight: 300; line-height: var(--ibm-lh-100); }
+.reveal .slides .cols-4.dividers {
+  background:
+    var(--ibm-line) 480px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 1440px 45px / 1px 915px no-repeat;
+}
+.reveal .slides .cols-4.dividers-short {
+  background:
+    var(--ibm-line) 480px 240px / 1px 720px no-repeat,
+    var(--ibm-line) 960px 240px / 1px 720px no-repeat,
+    var(--ibm-line) 1440px 240px / 1px 720px no-repeat;
+}
+
+.reveal .slides .cols-2 { font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides .cols-2 > :is(h1, h2) { grid-area: 1 / 1 / -1 / 3; padding-right: 36px; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .cols-2.sm-title > :is(h1, h2) { grid-column: 1 / 2; padding-right: 0; font-size: 36px; line-height: var(--ibm-lh-110); margin-top: 0; }
+.reveal .slides .cols-2 > .intro { grid-area: 1 / 2 / 2 / 3; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .cols-2:has(> .intro) > :is(h1, h2) { grid-column: 1 / 2; padding-right: 0; }
+.reveal .slides .cols-2 > .col { grid-row: 1 / -1; }
+.reveal .slides .cols-2 > .col:nth-of-type(1) { grid-column-start: 3; }
+.reveal .slides .cols-2 > .col:nth-of-type(2) { grid-column-start: 4; }
+.reveal .slides .cols-2:has(> .intro) > .col:nth-of-type(1) { grid-column-start: 2; grid-row: 2 / -1; }
+.reveal .slides .cols-2:has(> .intro) > .col:nth-of-type(2) { grid-column-start: 3; }
+.reveal .slides .cols-2:has(> .intro) > .col:nth-of-type(3) { grid-column-start: 4; }
+.reveal .slides .cols-2 > .col:has(> :is(.head, h3, .picto):first-child) { font-size: 20px; font-weight: 400; line-height: var(--ibm-lh-110); }
+.reveal .slides .cols-2.dividers {
+  background:
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 1440px 45px / 1px 915px no-repeat;
+}
+
+.reveal .slides .halves > :is(h1, h2) { grid-column: 1 / 3; max-width: 585px; font-size: 36px; }
+.reveal .slides .halves > .col { grid-column: span 2; }
+
+/* ---- Boxes [27-35] -------------------------------------------------------
+   Short text boxes on a two-row grid (upper 45-435, lower 525-960, rule at 480).
+   <section class="boxes-4|boxes-4h|boxes-6|boxes-6alt|boxes-4wide">
+     [<p class="label">]  <h2>Title</h2>  <div class="box">...</div> x N
+   Add .lg-title for the 68px title, .rules for the divider lines on .boxes-6. */
+.reveal .slides :is(.boxes-4, .boxes-4h, .boxes-6, .boxes-6alt, .boxes-4wide) {
+  grid-template-rows: 390px 435px;
+  row-gap: 90px;
+  font-size: 28px; line-height: var(--ibm-lh-110);
+}
+.reveal .slides [class*="boxes-"] > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 36px; line-height: var(--ibm-lh-110); }
+.reveal .slides [class*="boxes-"] > .label { grid-area: 1 / 1 / 2 / 2; font-size: 28px; line-height: var(--ibm-lh-100); }
+.reveal .slides [class*="boxes-"] > .label ~ :is(h1, h2) { padding-top: 75px; }
+.reveal .slides [class*="boxes-"].lg-title > :is(h1, h2) { grid-column: 1 / 3; padding-right: 36px; font-size: 68px; line-height: var(--ibm-lh-100); }
+.reveal .slides [class*="boxes-"].lg-title > :is(h1, h2):first-child { margin-top: -15px; }
+.reveal .slides .box { display: flex; flex-direction: column; }
+.reveal .slides .box > .icon:first-child { margin-bottom: 43px; flex: none; }
+.reveal .slides .box > .picto:first-child { margin-bottom: 54px; flex: none; }
+
+.reveal .slides .boxes-4 > .box:nth-of-type(1) { grid-area: 1 / 3; }
+.reveal .slides .boxes-4 > .box:nth-of-type(2) { grid-area: 1 / 4; }
+.reveal .slides .boxes-4 > .box:nth-of-type(3) { grid-area: 2 / 3; }
+.reveal .slides .boxes-4 > .box:nth-of-type(4) { grid-area: 2 / 4; }
+
+.reveal .slides .boxes-4h > .box { grid-row: 2; grid-column: auto; }
+
+.reveal .slides .boxes-6 > .box { grid-column: auto; }
+.reveal .slides .boxes-6 > .box:nth-of-type(-n+3) { grid-row: 1; }
+.reveal .slides .boxes-6 > .box:nth-of-type(n+4) { grid-row: 2; }
+.reveal .slides .boxes-6 > .box:nth-of-type(3n+1) { grid-column: 2; }
+.reveal .slides .boxes-6 > .box:nth-of-type(3n+2) { grid-column: 3; }
+.reveal .slides .boxes-6 > .box:nth-of-type(3n) { grid-column: 4; }
+.reveal .slides .boxes-6.rules { font-size: 24px; }
+.reveal .slides .boxes-6.rules {
+  background:
+    var(--ibm-line) 480px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 1440px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 480px 480px / 1395px 1px no-repeat;
+}
+
+.reveal .slides .boxes-6alt {
+  background:
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 1440px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 480px 480px / 1px 480px no-repeat,
+    var(--ibm-line) 45px 480px / 1830px 1px no-repeat;
+}
+.reveal .slides .boxes-6alt > .box:nth-of-type(1) { grid-area: 1 / 3; }
+.reveal .slides .boxes-6alt > .box:nth-of-type(2) { grid-area: 1 / 4; }
+.reveal .slides .boxes-6alt > .box:nth-of-type(n+3) { grid-row: 2; grid-column: auto; }
+
+.reveal .slides .boxes-4wide {
+  font-size: 42px; line-height: var(--ibm-lh-100);
+  background:
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 45px 480px / 1830px 1px no-repeat;
+}
+.reveal .slides .boxes-4wide > .box { grid-column: span 2; padding-right: 345px; }
+.reveal .slides .boxes-4wide > .box:nth-of-type(-n+2) { grid-row: 1; }
+.reveal .slides .boxes-4wide > .box:nth-of-type(n+3) { grid-row: 2; }
+.reveal .slides .boxes-4wide > .box > .picto:first-child { margin-bottom: 54px; }
+
+/* ---- Imagery [36-40] -----------------------------------------------------
+   .media-half  [36]  small title + text in cols 1-2, picture cols 3-4 (inset)
+   .media-3q    [37]  small title + text in col 1, picture bleeds x480 to edge
+   .media-3q.inset [38] picture inset in cols 2-4
+   .media-full  [39]  picture bleeds the whole slide (.inset [40] keeps margins)
+   Picture: <img class="media"> / <video class="media"> / <div class="media"> */
+.reveal .slides :is(.media-half, .media-3q) > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides :is(.media-half, .media-3q) { font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides :is(.media-half, .media-3q) > :not(h1, h2, .media, .ibm-footer, .ibm-num) { grid-row: 2 / -1; grid-column: auto; margin-top: 0; }
+.reveal .slides :is(.media-half, .media-3q, .media-full) > .media { position: absolute; }
+.reveal .slides .media-half > .media { left: 1005px; top: 45px; width: 870px; height: 990px; }
+.reveal .slides .media-3q > .media { left: 480px; top: 0; width: 1440px; height: 1080px; }
+.reveal .slides .media-3q.inset > .media { left: 525px; top: 45px; width: 1350px; height: 990px; }
+.reveal .slides .media-full > .media { left: 0; top: 0; width: 1920px; height: 1080px; }
+.reveal .slides .media-full.inset > .media { left: 45px; top: 45px; width: 1830px; height: 990px; }
+
+/* ---- Contacts [41] -------------------------------------------------------
+   <h2>Contacts</h2> then up to six
+   <div class="person"><img class="media" src=...><div><p>Name</p><p>Role</p></div></div> */
+.reveal .slides .contacts {
+  grid-template-rows: 195px 195px 45px 195px 45px 195px;
+  font-size: 28px; line-height: var(--ibm-lh-110);
+}
+.reveal .slides .contacts > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides .person { display: grid; grid-template-columns: 194px 449px; column-gap: 31px; grid-column: span 2; }
+.reveal .slides .person > .media { width: 194px; height: 195px; }
+.reveal .slides .person p + p { margin-top: 0; }
+.reveal .slides .contacts > .person:nth-of-type(1) { grid-area: 2 / 1 / 3 / 3; }
+.reveal .slides .contacts > .person:nth-of-type(2) { grid-area: 4 / 1 / 5 / 3; }
+.reveal .slides .contacts > .person:nth-of-type(3) { grid-area: 6 / 1 / 7 / 3; }
+.reveal .slides .contacts > .person:nth-of-type(4) { grid-area: 2 / 3 / 3 / 5; }
+.reveal .slides .contacts > .person:nth-of-type(5) { grid-area: 4 / 3 / 5 / 5; }
+.reveal .slides .contacts > .person:nth-of-type(6) { grid-area: 6 / 3 / 7 / 5; }
+
+/* ---- Table [42] / Chart [43] ---------------------------------------------
+   .table:  <h2>Title</h2> <table>   (cols 2-4)
+   .chart:  <h2>Title</h2> <p>Description</p> <div class="figure">chart</div>
+            [<p class="source">Source: ...</p>] */
+.reveal .slides :is(.table, .chart) > :is(h1, h2) { grid-area: 1 / 1 / 2 / 2; font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides .table > table { grid-area: 1 / 2 / -1 / 5; align-self: start; }
+.reveal table { border-collapse: collapse; width: 100%; font-size: 24px; line-height: var(--ibm-lh-110); }
+.reveal table th, .reveal table td {
+  text-align: left; vertical-align: top;
+  padding: 14.4px 7.2px;
+  border: 0; border-bottom: var(--ibm-rule);
+}
+.reveal table th { font-weight: 500; }
+.reveal table thead th { border-bottom: var(--ibm-rule); }
+
+.reveal .slides .chart { font-size: 28px; line-height: var(--ibm-lh-110); }
+.reveal .slides .chart > p:not(.source) { grid-area: 2 / 1 / -1 / 2; }
+.reveal .slides .chart > :is(.figure, .diagram, figure, svg, img, canvas) { grid-area: 1 / 2 / -1 / 5; width: 100%; height: 100%; }
+
+/* ---- Legal [44-45] -------------------------------------------------------
+   <section class="legal [two]"><h2>Legal</h2><div>text...</div></section> */
+.reveal .slides .legal > :is(h1, h2) { grid-area: 1 / 1 / 3 / 2; font-size: 68px; line-height: var(--ibm-lh-100); margin-top: -15px; }
+.reveal .slides .legal > :not(h1, h2, .ibm-footer, .ibm-num) {
+  grid-area: 1 / 4 / -1 / 5;
+  font-size: 16px; font-weight: 400; line-height: var(--ibm-lh-120);
+}
+.reveal .slides .legal.two > :not(h1, h2, .ibm-footer, .ibm-num) { grid-column: 3 / 5; columns: 2; column-gap: var(--ibm-gutter); }
+.reveal .slides .legal p + p { margin-top: 1lh; }
+
+/* ---- Blank [46-47] / End [48] --------------------------------------------- */
+.reveal .slides .blank > :is(h1, h2) { grid-column: 1 / 2; font-size: 28px; line-height: var(--ibm-lh-110); }
+
+
+/* ==========================================================================
+   Utilities (override layout placement / size)
+   ========================================================================== */
+.reveal .slides .c1 { grid-column-start: 1 !important; }
+.reveal .slides .c2 { grid-column-start: 2 !important; }
+.reveal .slides .c3 { grid-column-start: 3 !important; }
+.reveal .slides .c4 { grid-column-start: 4 !important; }
+.reveal .slides .w2 { grid-column-end: span 2 !important; }
+.reveal .slides .w3 { grid-column-end: span 3 !important; }
+.reveal .slides .w4 { grid-column-end: span 4 !important; }
+.reveal .slides .t16 { font-size: 16px !important; font-weight: 400; line-height: var(--ibm-lh-120); }
+.reveal .slides .t20 { font-size: 20px !important; font-weight: 400; }
+.reveal .slides .t24 { font-size: 24px !important; }
+.reveal .slides .t28 { font-size: 28px !important; }
+.reveal .slides .t36 { font-size: 36px !important; }
+.reveal .slides .t42 { font-size: 42px !important; }
+.reveal .slides .t68 { font-size: 68px !important; line-height: var(--ibm-lh-100); }
+.reveal .slides .t84 { font-size: 84px !important; line-height: var(--ibm-lh-100); }

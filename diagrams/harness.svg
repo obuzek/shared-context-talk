@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Everything on top of the LLM is harness. Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <rect class="group" x="0" y="0" width="1350" height="915"/>
+  <text class="sm muted" x="24" y="44">harness: everything on top of that</text>
+  <rect class="node" x="60" y="80" width="330" height="130"/>
+  <text class="title mid" x="225" y="130">tools</text>
+  <text class="sm muted mid" x="225" y="166">some tokens reference tools</text>
+  <rect class="node" x="510" y="80" width="330" height="130"/>
+  <text class="title mid" x="675" y="130">memories</text>
+  <text class="sm muted mid" x="675" y="166">from previous sessions</text>
+  <rect class="node" x="960" y="80" width="330" height="130"/>
+  <text class="title mid" x="1125" y="130">skills</text>
+  <text class="sm muted mid" x="1125" y="166">loaded dynamically</text>
+  <rect class="node" x="60" y="392" width="330" height="130"/>
+  <text class="title mid" x="225" y="442">files and binaries</text>
+  <text class="sm muted mid" x="225" y="478">read, write, execute</text>
+  <rect class="node accent" x="510" y="382" width="330" height="150"/>
+  <text class="title on-accent mid" x="675" y="442">LLM</text>
+  <text class="sm on-accent mid" x="675" y="478">the most likely tokens</text>
+  <rect class="node" x="960" y="392" width="330" height="130"/>
+  <text class="title mid" x="1125" y="442">jump back</text>
+  <text class="sm muted mid" x="1125" y="478">to a prior point in history</text>
+  <rect class="node" x="60" y="705" width="330" height="130"/>
+  <text class="title mid" x="225" y="755">fork</text>
+  <text class="sm muted mid" x="225" y="791">conversations</text>
+  <rect class="node" x="510" y="705" width="330" height="130"/>
+  <text class="title mid" x="675" y="755">headless sessions</text>
+  <text class="sm muted mid" x="675" y="791">talking to itself</text>
+  <rect class="node" x="960" y="705" width="330" height="130"/>
+  <text class="title mid" x="1125" y="755">multiple sessions</text>
+  <text class="sm muted mid" x="1125" y="791">interacting together</text>
+</svg>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
+<!-- Scoping for a manager of Team A and Team B with a leadership context: the policy engine makes the
+     team contexts read-only while leadership is loaded, so nothing leaks down (click). Chart layout (1350 x 915). -->
+<svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
+  <!-- the hierarchy -->
+  <rect class="node" x="0" y="40" width="390" height="100"/>
+  <text class="title mid" x="195" y="90">leadership</text>
+  <line class="edge plain dashed muted" x1="195" y1="140" x2="195" y2="215"/>
+  <text class="agent mid" x="195" y="250">🧑‍💼</text>
+  <text class="sm mid" x="195" y="305">manager</text>
+  <line class="edge plain" x1="195" y1="325" x2="90" y2="400"/>
+  <line class="edge plain" x1="195" y1="325" x2="300" y2="400"/>
+  <rect class="node" x="0" y="400" width="180" height="100"/>
+  <text class="title mid" x="90" y="450">Team A</text>
+  <rect class="node" x="210" y="400" width="180" height="100"/>
+  <text class="title mid" x="300" y="450">Team B</text>
+
+  <!-- the manager's agent goes through the policy engine -->
+  <line class="edge" x1="250" y1="250" x2="620" y2="250"/>
+  <text class="agent mid" x="675" y="250">🤖</text>
+  <text class="sm mid" x="675" y="305">manager's agent</text>
+  <line class="edge" x1="675" y1="325" x2="675" y2="380"/>
+  <rect class="node" x="480" y="380" width="390" height="140"/>
+  <text class="title mid" x="675" y="440">policy engine</text>
+  <text class="sm muted mid" x="675" y="476">scopes the session</text>
+
+  <!-- what the session can see -->
+  <path class="edge" d="M870 450 H915 V115 H960"/>
+  <path class="edge" d="M870 450 H915 V405 H960"/>
+  <path class="edge" d="M870 450 H915 V695 H960"/>
+  <rect class="node" x="960" y="40" width="390" height="150"/>
+  <text class="title" x="984" y="100">leadership context</text>
+  <text class="sm accent" x="984" y="140">🔒 read-only</text>
+  <rect class="node" x="960" y="330" width="390" height="150"/>
+  <text class="title" x="984" y="390">Team A context</text>
+  <text class="sm accent" x="984" y="430">🔒 read-only</text>
+  <rect class="node" x="960" y="620" width="390" height="150"/>
+  <text class="title" x="984" y="680">Team B context</text>
+  <text class="sm accent" x="984" y="720">🔒 read-only</text>
+
+  <!-- click: the reorg write is blocked -->
+  <g class="fragment" data-fragment-index="1">
+    <path class="edge accent dashed" d="M675 520 V840 H1155 V770"/>
+    <circle class="node" cx="900" cy="840" r="26"/>
+    <text class="title accent mid" x="900" y="840">✕</text>
+    <text class="sm" x="0" y="620">“reassigning Team A’s issues</text>
+    <text class="sm" x="0" y="648">to Team B, because of</text>
+    <text class="sm" x="0" y="676">Monday’s reorg…”</text>
+    <text class="sm accent" x="0" y="730">blocked: no writes to team</text>
+    <text class="sm accent" x="0" y="758">contexts while leadership</text>
+    <text class="sm accent" x="0" y="786">is loaded</text>
+  </g>
+</svg>
