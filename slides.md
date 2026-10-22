@@ -1483,9 +1483,9 @@ Note:
 
 * ontology + KG engineering: show a simple knowledge graph and the types of information it might store. one of our internal projects also referenced some sort of well-known project - semanticweb maybe? - with well-established ontologies. show an example of one of these and then reference it.
 
-* (from the shared context note) reference the one that John from Project Prince shared to say that you don't have to start from 0 on ontology development
+* (from the shared context note) reference an internal experiment to say that you don't have to start from 0 on ontology development
 
-[ref] Project Prince: John's two-day experiment "extracting Markdown content into RDF (Resource Description Framework) and OWL (Web Ontology Language) — technologies from the semantic web … Bob's reasoning on strictly typed RDF graphs is significantly more reliable than on loosely structured Markdown, because the schema enforces exactly how entities relate." project-synapse-quartz, practices/shared-context/project-prince.md · his reports repo (jdoyle3/Project-Prince-Reports) uses the prov:, skos:, dcterms: and SEON prefixes.
+[ref] An internal two-day experiment extracted Markdown content into RDF and OWL (semantic web technologies): agents reasoned more reliably over strictly typed RDF graphs than over loosely structured Markdown, because the schema enforces exactly how entities relate. It used the prov:, skos:, dcterms: and SEON prefixes.
 
 [ref] PROV-O, W3C Recommendation, 30 Apr 2013: https://www.w3.org/TR/prov-o/ · Organization Ontology, W3C Recommendation, 16 Jan 2014: https://www.w3.org/TR/vocab-org/ · every term on the diagram was checked against those specs.
 
@@ -1582,7 +1582,7 @@ Note:
 
 * we need a managed memory instance with shared human and agentic oversight, responsible for filtering the memories down to what’s currently true (mem0, graphiti, etc have all established “observer” agents whose responsibility it is to keep track of important information)
 
-* we need a knowledge graph with an ontology, ACL’d, such that episodic, semantic and procedural information are all meaningfully tracked (example ontologies; reference the one that John from Project Prince shared to say that you don’t have to start from 0 on ontology development)
+* we need a knowledge graph with an ontology, ACL’d, such that episodic, semantic and procedural information are all meaningfully tracked (example ontologies; reference an internal experiment to say that you don’t have to start from 0 on ontology development)
 
 * we need the concept of “aging” knowledge, and knowledge supercession, so agents aren’t stuck dealing with outdated information through the lens of a floppy disk
 
