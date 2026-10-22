@@ -63,6 +63,7 @@ Note: Speaker notes start here. Put any HTML in backticks: `<img class="media">`
 | Point → implication rows | default (no layout class) | `<div class="implies">` + pairs of `<p class="point">..</p><p class="implication">..</p>`; CSS draws the arrow |
 | Hand-drawn (imagined data) | any diagram | `<svg class="ibm-diagram sketch">` + a `<filter id="rough">` in `<defs>`; `text.hand` for handwriting (see `diagrams/context-growth.svg`) |
 | Cited facts in column 1 | `chart` | `<div class="cites"><p>fact</p><p class="cite">source</p></div>` instead of one `p` |
+| Title + 3 questions as a full-slide 2x2 | `boxes-4 questions quad` | `##` (top-left) + 3 `<div class="box">`; CSS draws the cross rules |
 | Metrics 2x2 | `boxes-4 metrics` | per box: `p.q`, `p.metric`, `p.from` (low), `p.to` (elite); optional `p.aside` lower-left |
 | Logo table | default | `<div class="landscape">` rows of `img` + `p.name` + `div.what` (`p`, `p.solves`) |
 | A colleague's slide, whole | `media-full borrowed dark` + `style="--ibm-bg: #000000"` | `<img class="media">` (stack with `fragment` for builds) + `p.credit` |

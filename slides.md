@@ -851,7 +851,7 @@ The components we think are essential are:
 
 * A KG-based memory with an ontology: this enables long-running sessions, but also session restarts
     * Episodic - task tree
-    * Semantic - "LLMWiki", essentially
+    * Semantic - org information, architectural decisions
     * Procedural - skills, workflow documentation
 * Connection to a work tracker for feature and bug-level tickets: connection to JIRA / whatever, which allows it to track work
 * Connection to logs for the production system: allows alerting, situational awareness
@@ -972,9 +972,9 @@ Note:
 
 <!-- .slide: class="callout" -->
 
-## Massive coordination
+## Massive results requires massive coordination
 
-In order to accomplish this vision, these agents need to operate in a massively coordinated way. Hence: shared context.
+<span class="muted">Agents need to learn from each other to accomplish complex tasks.</span>
 
 Note:
 [original title] These agents need to operate in a massively coordinated way
@@ -1056,25 +1056,25 @@ Note:
 
 ---
 
-<!-- .slide: class="cols-4 dividers" -->
+<!-- .slide: class="boxes-4 questions quad" -->
 
 ## Who's responsible?
 
-<div class="col">
+<div class="box">
 
-### Who's responsible for making sure everything gets written down?
-
-</div>
-
-<div class="col">
-
-### Who's responsible for making sure the right people have access to the right information?
+Who's responsible for making sure everything gets written down?
 
 </div>
 
-<div class="col">
+<div class="box">
 
-### Who's responsible for keeping the information correct, up to date, and sanitized?
+Who's responsible for making sure the right people have access to the right information?
+
+</div>
+
+<div class="box">
+
+Who's responsible for keeping the information correct, up to date, and sanitized?
 
 </div>
 
@@ -1087,7 +1087,7 @@ Note:
 
 * who’s responsible for making sure that the right people have access to the right information? (example: a manager of Team A and Team B has a shared context instance, including work tracking. they’ve hooked up to that shared context instance, but also to their own email account. an agent acting on the manager’s behalf casually writes to an issue: “reassigning Team A’s issues to Team B, because Team A is part of Monday’s reorg announcement”. no amount of “DO NOT SHARE INFORMATION FROM MY PERSONAL EMAIL TO THE TEAM!!!” is going to be enough here.)
 
-* who’s responsible for keeping the information correct, up to date, and sanitized? (example: the principal engineer on a project decides on a particular framework and not another, due to licensing and stability issues. junior developer Joe and his agent figure out that it’s much harder to implement feature XYZ with that framework, so they submit a PR that pulls in MajorUnlicensedLibrary. an agent auto-approves it, because: it works!! the agent cheerfully updates the shared context to explain that they’ve simply overridden the decision, NBD, because otherwise you can’t get the task done.)
+* who’s responsible for keeping the information correct, up to date, and sanitized? (example: the principal engineer on a project decides on a particular framework and not another, due to licensing and stability issues. a junior developer and their agent figure out that it’s much harder to implement feature XYZ with that framework, so they submit a PR that pulls in MajorUnlicensedLibrary. an agent auto-approves it, because: it works!! the agent cheerfully updates the shared context to explain that they’ve simply overridden the decision, NBD, because otherwise you can’t get the task done.)
 
 ---
 
@@ -1108,16 +1108,16 @@ Note:
 
 <!-- .slide: class="chart" -->
 
-## Correctness: Joe's library
+## Correctness: two decisions, one wiki
 
-The principal engineer decides on a particular framework. Joe and his agent figure out that feature XYZ is much harder with it.
+The principal engineer picks a framework. A junior developer's agent works around it. Both write their decision to the shared wiki, and nothing dedupes them.
 
 <div class="diagram" data-src="diagrams/joe.svg"></div>
 
 Note:
-[original title] Junior developer Joe and his agent
+[original title] Junior developer and their agent
 
-* who’s responsible for keeping the information correct, up to date, and sanitized? (example: the principal engineer on a project decides on a particular framework and not another, due to licensing and stability issues. junior developer Joe and his agent figure out that it’s much harder to implement feature XYZ with that framework, so they submit a PR that pulls in MajorUnlicensedLibrary. an agent auto-approves it, because: it works!! the agent cheerfully updates the shared context to explain that they’ve simply overridden the decision, NBD, because otherwise you can’t get the task done.)
+* who’s responsible for keeping the information correct, up to date, and sanitized? (example: the principal engineer on a project decides on a particular framework and not another, due to licensing and stability issues. a junior developer and their agent figure out that it’s much harder to implement feature XYZ with that framework, so they submit a PR that pulls in MajorUnlicensedLibrary. an agent auto-approves it, because: it works!! the agent cheerfully updates the shared context to explain that they’ve simply overridden the decision, NBD, because otherwise you can’t get the task done.)
 
 ---
 
@@ -1125,7 +1125,7 @@ Note:
 
 ## Old problems, lightning speed
 
-These problems already existed in the pre-AI world. But as we increasingly introduce automation to the work, they now happen at lightning speed.
+<span class="muted">Any disarray in your current org gets amplified by AI.</span>
 
 Note:
 [original title] These problems already existed in the pre-AI world
@@ -1314,11 +1314,13 @@ Note:
 
 ---
 
-<!-- .slide: class="callout" -->
-
 ## Outcomes, not code
 
-Making sure planes land, making sure healthcare information is safe, making the taxes get done, running financial transactions, and, yes, entertaining you at two in the morning.
+* Making sure planes land
+* making sure healthcare information is safe
+* making the taxes get done
+* running financial transactions
+* entertaining you at two in the morning
 
 Note:
 [original title] The purpose of software engineering isn't simply to create more software
@@ -1470,7 +1472,7 @@ Note:
 
 <div class="cites">
 <p>A simple knowledge graph: typed things, typed relationships.</p>
-<p class="fragment" data-fragment-index="1">You don't have to start from zero. Project Prince extracted Markdown into RDF and OWL, building on W3C PROV-O, SKOS, Dublin Core and SEON.</p>
+<p class="fragment" data-fragment-index="1">You don't have to start from zero. Example: extract Markdown into RDF and OWL, building on W3C PROV-O, SKOS, Dublin Core and SEON.</p>
 <p class="cite fragment" data-fragment-index="1">W3C PROV-O (Recommendation, 2013) · W3C Organization Ontology (Recommendation, 2014)</p>
 </div>
 
@@ -1498,7 +1500,7 @@ Shared specs, or at least shared ADRs, can guide the shared context: a backbone 
 <div class="diagram" data-src="diagrams/adr-backbone.svg"></div>
 
 Note:
-[answers] Correctness: Joe's library.
+[answers] Correctness: two decisions, one wiki.
 
 * spec-driven development as a shared context strategy: shared specs, or at least shared ADRs, can guide the shared context. show the ADRs forming a backbone of an LLMwiki alongside a formal ontology
 
@@ -1588,7 +1590,7 @@ Note:
 
 <!-- .slide: class="callout-solo" -->
 
-And, by the way, this is essentially still an open research problem.
+This is still an open research problem.
 
 Note:
 - [ Run through the known architectural concepts for a good shared context, which address the major concerns, take into account the known invariants - and, by the way, is essentially still an open research problem. ]
@@ -1597,7 +1599,7 @@ Note:
 
 <!-- .slide: class="section-divider" -->
 
-## So now you know
+## What should we do now?
 
 Note:
 8. So now you know: The art of AI native is out there. But it's not something you can install tomorrow. To do this well, you need a set of people focused on solving these essential problems, cobbling together technologies and iterating on solutions.
@@ -1608,7 +1610,7 @@ Note:
 
 ## AI native is out there
 
-But it's not something you can install tomorrow.
+<span class="muted">But it's not something you can install tomorrow.</span>
 
 Note:
 [original title] The art of AI native is out there
@@ -1617,11 +1619,14 @@ Note:
 
 ---
 
-<!-- .slide: class="callout" -->
+## Strong opinion, weakly held
 
-## My strong opinion, weakly held
+Agents need:
+* world models
+* belief models
+* deletion models
 
-Until and unless agents introduce "world models," "belief models," or "deletion models," we're still going to need to work around these issues.
+Until then, we'll still need to work around these issues.
 
 Note:
 * can you build shared context tomorrow? maybe. what I’ve given you here are the pieces. my strong opinion, weakly held, is that given the known invariants, engineering around these particular concerns is reasonable. until and unless agents introduce “world models” and “belief models” that can correct these particular faulty behaviors, or “deletion models” that are tuned more towards removing outdated and incorrect information than producing new information - we’re still going to need to work around these issues.
@@ -1699,9 +1704,7 @@ Note:
 
 <!-- .slide: class="callout" -->
 
-## Your gaps will persist
-
-Organizations have always had this tendency: to work out of sync from one another, move in twenty directions at once, and produce More at the expense of Better.
+## Your shared context and agent factory success is dependent on your organization
 
 Note:
 [original title] Whatever gaps currently exist in your organization are likely to persist
@@ -1710,26 +1713,11 @@ Note:
 
 ---
 
-<!-- .slide: class="callout" -->
-
-## Staff the problem
-
-Cobbling together technologies and iterating on solutions.
-
-Note:
-[original title] You need a set of people focused on solving these essential problems
-
-8. So now you know: The art of AI native is out there. But it's not something you can install tomorrow. To do this well, you need a set of people focused on solving these essential problems, cobbling together technologies and iterating on solutions.
-
-* organizations that are responsible for highly sensitive information will need _some_ solution to all of these problems. ultimately, our recommendation is to focus specific teams on solving the problem the best way possible in your organization.
-
----
-
-<!-- .slide: class="callout" -->
-
 ## Let's talk
 
-We have a few different groups coordinating within IBM on this, and we'd love to collaborate with people who are tackling similar problems and dealing with similarly regulated situations.
+Reach out: IBMers are working on this problem too.
+
+ombuzek@us.ibm.com
 
 Note:
 [original title] If that's you, please reach out

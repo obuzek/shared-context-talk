@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
 <!-- Specs and ADRs as the backbone: wiki pages hang off decisions; the ontology types them.
-     Click: Joe's PR meets ADR-007 and goes to a human. Chart layout (1350 x 915). -->
+     Click: the junior developer's PR meets ADR-007 and goes to a human. Chart layout (1350 x 915). -->
 <svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
   <text class="title mid" x="165" y="30">LLM wiki</text>
   <text class="title mid" x="675" y="30">ADRs</text>
@@ -46,10 +46,10 @@
   <line class="edge plain" x1="825" y1="515" x2="1040" y2="515"/>
   <path class="edge plain" d="M825 515 H960 V615 H1040"/>
 
-  <!-- click: Joe's PR meets the backbone -->
+  <!-- click: the junior developer's PR meets the backbone -->
   <g class="fragment" data-fragment-index="1">
     <text class="agent mid" x="60" y="800">🤖</text>
-    <text class="sm" x="110" y="790">Joe's agent: PR pulls in</text>
+    <text class="sm" x="110" y="790">junior dev's agent: PR pulls in</text>
     <text class="sm" x="110" y="816">MajorUnlicensedLibrary</text>
     <line class="edge accent" x1="330" y1="770" x2="525" y2="560"/>
     <text class="title accent" x="525" y="860">conflicts with ADR-007: ask a human</text>

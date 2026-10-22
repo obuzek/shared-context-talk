@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
-<!-- Joe and MajorUnlicensedLibrary: a decision gets overridden, and the shared context says so. Chart layout (1350 x 915). -->
+<!-- Two writers, one wiki: the principal engineer and a junior developer's agent both write their decision to the
+     shared wiki. The entries conflict and nothing dedupes them (shown on click). Chart layout (1350 x 915). -->
 <svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
-  <rect class="node" x="0" y="60" width="390" height="260"/>
-  <text class="title mid" x="195" y="145">principal engineer</text>
-  <text class="sm muted mid" x="195" y="181">picks a framework,</text>
-  <text class="sm muted mid" x="195" y="211">due to licensing</text>
-  <text class="sm muted mid" x="195" y="241">and stability issues</text>
-  <rect class="node" x="480" y="60" width="390" height="260"/>
-  <text class="title mid" x="675" y="160">Joe and his agent</text>
-  <text class="sm muted mid" x="675" y="196">feature XYZ is much harder</text>
-  <text class="sm muted mid" x="675" y="226">with that framework</text>
-  <rect class="node" x="960" y="60" width="390" height="260"/>
-  <text class="title mid" x="1155" y="160">PR</text>
-  <text class="sm muted mid" x="1155" y="196">pulls in</text>
-  <text class="sm muted mid" x="1155" y="226">MajorUnlicensedLibrary</text>
-  <rect class="node" x="960" y="520" width="390" height="260"/>
-  <text class="title mid" x="1155" y="620">agent review</text>
-  <text class="sm muted mid" x="1155" y="656">auto-approved.</text>
-  <text class="sm muted mid" x="1155" y="686">it works!!</text>
-  <rect class="node accent" x="480" y="520" width="390" height="260"/>
-  <text class="title on-accent mid" x="675" y="620">shared context</text>
-  <text class="sm on-accent mid" x="675" y="656">“the decision was</text>
-  <text class="sm on-accent mid" x="675" y="686">overridden, NBD”</text>
-  <line class="edge" x1="390" y1="190" x2="480" y2="190"/>
-  <line class="edge" x1="870" y1="190" x2="960" y2="190"/>
-  <line class="edge" x1="1155" y1="320" x2="1155" y2="520"/>
-  <line class="edge accent" x1="960" y1="650" x2="870" y2="650"/>
+  <!-- writes into the wiki -->
+  <path class="edge" d="M195 260 V330 H453 V400"/>
+  <path class="edge" d="M1155 290 V330 H897 V400"/>
+
+  <!-- the two writers -->
+  <rect class="node" x="0" y="40" width="390" height="220"/>
+  <text class="title mid" x="195" y="110">principal engineer</text>
+  <text class="sm muted mid" x="195" y="150">picks Framework A,</text>
+  <text class="sm muted mid" x="195" y="180">due to licensing</text>
+  <text class="sm muted mid" x="195" y="210">and stability issues</text>
+
+  <rect class="node" x="960" y="40" width="390" height="250"/>
+  <text class="title mid" x="1155" y="100">junior developer 🤖</text>
+  <text class="sm muted mid" x="1155" y="140">feature XYZ is much harder</text>
+  <text class="sm muted mid" x="1155" y="170">with Framework A; the PR pulls</text>
+  <text class="sm muted mid" x="1155" y="200">in MajorUnlicensedLibrary</text>
+  <text class="sm muted mid" x="1155" y="230">auto-approved: it works!!</text>
+
+  <!-- the shared wiki, holding both -->
+  <rect class="node" x="195" y="400" width="960" height="470"/>
+  <text class="title" x="219" y="444">shared team wiki</text>
+
+  <rect class="node fill" x="243" y="480" width="420" height="200"/>
+  <text x="267" y="530">Decision: use Framework A</text>
+  <text class="sm muted" x="267" y="570">licensing, stability</text>
+  <text class="sm muted" x="267" y="640">— principal engineer</text>
+
+  <rect class="node fill" x="687" y="480" width="420" height="200"/>
+  <text x="711" y="530">Decision: overridden, NBD</text>
+  <text class="sm muted" x="711" y="570">now on MajorUnlicensedLibrary</text>
+  <text class="sm muted" x="711" y="640">— junior developer's agent</text>
+
+  <!-- click: both stay -->
+  <g class="fragment" data-fragment-index="1">
+    <text class="title accent mid" x="675" y="760">both stay. nothing dedupes them.</text>
+  </g>
 </svg>

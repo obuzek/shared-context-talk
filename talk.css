@@ -91,6 +91,19 @@
 .reveal .slides .boxes-4.questions > .box { font-size: 44px; font-weight: 300; line-height: var(--ibm-lh-110); }
 .reveal .slides .boxes-4.questions > .box strong { font-weight: 300; }
 
+/* Title as one cell of a full-slide 2x2 (boxes-4 questions quad): title top-left, three questions in the other
+   quadrants, each spanning two columns, with rules between them */
+.reveal .slides .boxes-4.quad {
+  background:
+    var(--ibm-line) 960px 45px / 1px 915px no-repeat,
+    var(--ibm-line) 45px 480px / 1830px 1px no-repeat;
+}
+.reveal .slides .boxes-4.quad > h2 { grid-area: 1 / 1 / 2 / 3; padding-right: 45px; font-size: 68px; line-height: var(--ibm-lh-100); }
+.reveal .slides .boxes-4.quad > .box { padding-right: 45px; }
+.reveal .slides .boxes-4.quad > .box:nth-of-type(1) { grid-area: 1 / 3 / 2 / 5; }
+.reveal .slides .boxes-4.quad > .box:nth-of-type(2) { grid-area: 2 / 1 / 3 / 3; }
+.reveal .slides .boxes-4.quad > .box:nth-of-type(3) { grid-area: 2 / 3 / 3 / 5; }
+
 /* ---- Point → implication rows (standard): point in cols 1-2, arrow in the gutter, implication in cols 3-4 ----
    <div class="implies">
      <p class="point">Agent has its own workspace</p>
