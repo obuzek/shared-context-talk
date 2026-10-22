@@ -990,6 +990,7 @@ Note:
 <img class="media" src="img/gabe/gabe-context-3.png" alt="CONTEXT: the input to a GenAI model">
 
 <p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides, a brief refresher on why we call it "context"] Gabe's slide 4.
@@ -1003,6 +1004,7 @@ Note:
 <img class="media fragment" data-fragment-index="2" src="img/gabe/gabe-context-6.png" alt="Context tokens: I'm Gabe. What's my name?">
 
 <p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Context tokens (his slide 6 and its builds): each click lays the next build over the last.
@@ -1014,6 +1016,7 @@ Note:
 <img class="media" src="img/gabe/gabe-context-2.png" alt="Context patterns: prompting, knowledge, action, memory, length">
 
 <p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Context patterns, his slide 27.
@@ -1025,6 +1028,7 @@ Note:
 <img class="media" src="img/gabe/gabe-context-1.png" alt="Memory: remember and recall">
 
 <p class="credit">Slides: Gabe, IBM Dev Day 2026</p>
+<!-- Credit: these slide images are Gabe's, from his IBM Dev Day 2026 talk. Reproduced with credit to him. -->
 
 Note:
 [Gabe's slides] Memory, his slide 46. Leads into: shared context is memory that more than one agent, and more than one person, reads and writes.
@@ -1141,14 +1145,14 @@ Note:
 
 Our own team's shared-context wiki:
 
-<div class="diagram" data-src="diagrams/synapse-quartz-growth.svg"></div>
+<div class="diagram" data-src="diagrams/wiki-growth.svg"></div>
 
-<p class="source">project-synapse-quartz (published wiki), daily snapshots. Lines across the published HTML pages, counted once each</p>
+<p class="source">Our team's published shared-context wiki, daily snapshots. Lines across the published HTML pages, counted once each</p>
 
 Note:
 [original title] They're programmed to generate text and by god, they're going to generate text over anything else.
 
-[ref] Data: data/synapse-quartz-lines.csv (html_lines). Sep 9 → Oct 22, 2026: 3,571 → 20,310 lines of rendered pages (5.7×); files 163 → 893. Total lines in the repo went 4,148 → 64,701 (15.6×), but from Sep 26 the site also publishes .md copies and llms-full.txt (~22k lines, the whole wiki concatenated), so that figure counts content 2–3 times. Biggest content growth: meetings/ and practices/. 126 of 127 commits by Casey Gollan, 1 by "OpenWiki Bot"; no AI co-author trailers.
+[ref] Data: data/wiki-growth-lines.csv (html_lines). Sep 9 → Oct 22, 2026: 3,571 → 20,310 lines of rendered pages (5.7×); files 163 → 893. Total lines in the repo went 4,148 → 64,701 (15.6×), but from Sep 26 the site also publishes .md copies and llms-full.txt (~22k lines, the whole wiki concatenated), so that figure counts content 2–3 times. Biggest content growth: meetings/ and practices/. 126 of 127 commits by Casey Gollan, 1 by "OpenWiki Bot"; no AI co-author trailers.
 
 * they will always require some form of human input or direction on scope and what problems to pursue. left to their own devices, LLMs have a tendency to only ever increase the size of whatever they’re working on. essays, todo lists, programs, wikis: it doesn’t matter. they’re programmed to generate text and by god, they’re going to generate text over anything else. (what that means is, though, is eventually they’ve directed themselves in so many different directions that figuring out what’s actually _important_ or _salient_ is quite difficult.)
 
@@ -1741,6 +1745,7 @@ Slides from the earlier draft of the opening, kept for reference. data-visibilit
 <img class="media" src="img/team-maturity-model.png" alt="Team Maturity Model: Phase 1 individual AI assistance, Phase 2 AI-assisted workflows, Phase 3 agent factory model">
 
 <p class="credit">Appendix. "Scaling Agentic Adoption – Data Core," Jessica Nahulan, IBM 2026</p>
+<!-- Credit: the Team Maturity Model slide is Jessica Nahulan's, from "Scaling Agentic Adoption – Data Core" (IBM, 2026). Reproduced with credit to her. -->
 
 Note:
 [appendix, hidden] Team Maturity Model. It doesn't have a "first we start with the git repository" stage, so it's kept here rather than on the "Shared context maturity" slide (also hidden now). The credit on the slide says "Scaling Agentic Adoption – Data Core, Jessica Nahulan", not Casey Gollan: check who to credit.

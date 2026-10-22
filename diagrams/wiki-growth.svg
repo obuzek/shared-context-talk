@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="../ibm/diagram.css" type="text/css"?>
-<!-- Growth of the team shared-context wiki (project-synapse-quartz, gh-pages branch): lines across the published HTML pages
+<!-- Growth of the team shared-context wiki (its published gh-pages branch): lines across the published HTML pages
      (counts each page once; excludes the .md and llms*.txt copies the site also publishes from Sep 26).
-     Daily snapshot of the last commit each day. Data: data/synapse-quartz-lines.csv (html_lines). Chart layout (1350 x 915). -->
+     Daily snapshot of the last commit each day. Data: data/wiki-growth-lines.csv (html_lines). Chart layout (1350 x 915). -->
 <svg xmlns="http://www.w3.org/2000/svg" class="ibm-diagram" viewBox="0 0 1350 915">
   <line class="edge plain muted dashed" x1="110" y1="652" x2="1180" y2="652"/>
   <line class="edge plain muted dashed" x1="110" y1="504" x2="1180" y2="504"/>
